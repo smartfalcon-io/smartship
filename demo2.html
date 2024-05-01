@@ -1,0 +1,769 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Shipping Instructions</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shipping Instructions</h1>
+    <table>
+        <tr>
+            <th>Shipping Instruction Reference</th>
+            <td id="shippingInstructionReference"></td>
+        </tr>
+        <tr>
+            <th>Document Status</th>
+            <td id="documentStatus"></td>
+        </tr>
+        <tr>
+            <th>Shipping Instruction Created Date</th>
+            <td id="shippingInstructionCreatedDateTime"></td>
+        </tr>
+        <tr>
+            <th>Shipping Instruction Updated Date</th>
+            <td id="shippingInstructionUpdatedDateTime"></td>
+        </tr>
+        <tr>
+            <th>Amend to Transport Document</th>
+            <td id="amendToTransportDocument"></td>
+        </tr>
+        <tr>
+            <th>Transport Document Type Code</th>
+            <td id="transportDocumentTypeCode"></td>
+        </tr>
+        <tr>
+            <th>Shipped on Board Type</th>
+            <td id="isShippedOnBoardType"></td>
+        </tr>
+        <tr>
+            <th>Number of Copies with Charges</th>
+            <td id="numberOfCopiesWithCharges"></td>
+        </tr>
+        <tr>
+            <th>Number of Copies without Charges</th>
+            <td id="numberOfCopiesWithoutCharges"></td>
+        </tr>
+        <tr>
+            <th>Number of Originals with Charges</th>
+            <td id="numberOfOriginalsWithCharges"></td>
+        </tr>
+        <tr>
+            <th>Number of Originals without Charges</th>
+            <td id="numberOfOriginalsWithoutCharges"></td>
+        </tr>
+        <tr>
+            <th>Is Electronic</th>
+            <td id="isElectronic"></td>
+        </tr>
+        <tr>
+            <th>Is To Order</th>
+            <td id="isToOrder"></td>
+        </tr>
+        <tr>
+            <th>Displayed Name for Place of Receipt</th>
+            <td id="displayedNameForPlaceOfReceipt"></td>
+        </tr>
+        <tr>
+            <th>Displayed Name for Port of Load</th>
+            <td id="displayedNameForPortOfLoad"></td>
+        </tr>
+        <tr>
+            <th>Displayed Name for Port of Discharge</th>
+            <td id="displayedNameForPortOfDischarge"></td>
+        </tr>
+        <tr>
+            <th>Displayed Name for Place of Delivery</th>
+            <td id="displayedNameForPlaceOfDelivery"></td>
+        </tr>
+        <tr>
+            <th>Carrier Booking Reference</th>
+            <td id="carrierBookingReference"></td>
+        </tr>
+        <tr>
+            <th>Place of Issue</th>
+            <td>
+                <p>Location Name: <span id="placeOfIssueLocationName"></span></p>
+                <p>UN Location Code: <span id="placeOfIssueUNLocationCode"></span></p>
+            </td>
+        </tr>
+    </table>
+
+    <h2>Consignment Items</h2>
+    <table>
+        <tr>
+            <th>Carrier Booking Reference</th>
+            <th>Weight</th>
+            <th>Volume</th>
+            <th>Weight Unit</th>
+            <th>Volume Unit</th>
+            <th>Description of Goods</th>
+            <th>HS Code</th>
+        </tr>
+        <tbody id="consignmentItems"></tbody>
+    </table>
+
+    <h2>Utilized Transport Equipments</h2>
+    <table>
+        <tr>
+            <th>Equipment Reference</th>
+            <th>ISO Equipment Code</th>
+            <th>Tare Weight</th>
+            <th>Tare Weight Unit</th>
+            <th>Cargo Gross Weight</th>
+            <th>Cargo Gross Weight Unit</th>
+            <th>Cargo Gross Volume</th>
+            <th>Cargo Gross Volume Unit</th>
+            <th>Number of Packages</th>
+            <th>Is Shipper Owned</th>
+        </tr>
+        <tbody id="utilizedTransportEquipments"></tbody>
+    </table>
+
+    <h2>Document Parties</h2>
+    <table>
+        <tr>
+            <th>Party Name</th>
+            <th>Tax Reference 1</th>
+            <th>Tax Reference 2</th>
+            <th>Public Key</th>
+            <th>Address</th>
+            <th>Contact Details</th>
+            <th>Identifying Codes</th>
+            <th>Party Function</th>
+            <th>Displayed Address</th>
+            <th>Is To Be Notified</th>
+        </tr>
+        <tbody id="documentParties"></tbody>
+    </table>
+
+    <script>
+
+        var shippingInstructionData = {
+            "amendToTransportDocument": "string",
+            "transportDocumentTypeCode": "SWB",
+            "isShippedOnBoardType": true,
+            "numberOfCopiesWithCharges": 2,
+            "numberOfCopiesWithoutCharges": 2,
+            "numberOfOriginalsWithCharges": 1,
+            "numberOfOriginalsWithoutCharges": 1,
+            "isElectronic": true,
+            "isToOrder": false,
+            "displayedNameForPlaceOfReceipt": ["string"],
+            "displayedNameForPortOfLoad": ["string"],
+            "displayedNameForPortOfDischarge": ["string"],
+            "displayedNameForPlaceOfDelivery": ["string"],
+            "carrierBookingReference": "ABC709951",
+            "placeOfIssue": {
+                "locationName": "DCSA Headquarters",
+                "UNLocationCode": "NLAMS"
+            },
+            "consignmentItems": [
+                {
+                    "carrierBookingReference": "ABC709951",
+                    "weight": 13000.3,
+                    "volume": 12,
+                    "weightUnit": "KGM",
+                    "volumeUnit": "MTQ",
+                    "descriptionOfGoods": "string",
+                    "HSCode": "string",
+                    "cargoItems": [
+                        {
+                            "cargoLineItems": [
+                                {
+                                    "cargoLineItemID": "string",
+                                    "shippingMarks": "string"
+                                }
+                            ],
+                            "equipmentReference": "APZU4812090",
+                            "weight": 13000.3,
+                            "volume": 12,
+                            "weightUnit": "KGM",
+                            "volumeUnit": "MTQ",
+                            "numberOfPackages": 18,
+                            "packageCode": "5H4",
+                            "packageNameOnBL": "Bags"
+                        }
+                    ],
+                    "references": [
+                        {
+                            "type": "FF",
+                            "value": "string"
+                        }
+                    ]
+                }
+            ],
+            "utilizedTransportEquipments": [
+                {
+                    "equipment": {
+                        "equipmentReference": "APZU4812090",
+                        "ISOEquipmentCode": "22GP",
+                        "tareWeight": 4800,
+                        "weightUnit": "KGM"
+                    },
+                    "cargoGrossWeight": 12000,
+                    "cargoGrossWeightUnit": "KGM",
+                    "cargoGrossVolume": 120,
+                    "cargoGrossVolumeUnit": "MTQ",
+                    "numberOfPackages": 18,
+                    "isShipperOwned": true,
+                    "seals": [
+                        {
+                            "number": "string",
+                            "source": "CUS",
+                            "type": "WIR"
+                        }
+                    ]
+                }
+            ],
+            "documentParties": [
+                {
+                    "party": {
+                        "partyName": "Asseco Denmark",
+                        "taxReference1": "CVR-25645774",
+                        "taxReference2": "CVR-25645774",
+                        "publicKey": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFzaW",
+                        "address": {
+                            "name": "Henrik",
+                            "street": "Kronprinsessegade",
+                            "streetNumber": "54",
+                            "floor": "5. sal",
+                            "postCode": "1306",
+                            "city": "København",
+                            "stateRegion": "N/A",
+                            "country": "Denmark"
+                        },
+                        "partyContactDetails": [
+                            {
+                                "name": "Henrik",
+                                "phone": "+45 33364660",
+                                "email": "info@dcsa.org",
+                                "url": "https://www.dcsa.org"
+                            }
+                        ],
+                        "identifyingCodes": [
+                            {
+                                "DCSAResponsibleAgencyCode": "SMDG",
+                                "partyCode": "MSK",
+                                "codeListName": "LCL"
+                            }
+                        ]
+                    },
+                    "partyFunction": "DDS",
+                    "displayedAddress": [
+                        "Kronprincessegade 54"
+                    ],
+                    "isToBeNotified": true
+                }
+            ],
+            "references": [
+                {
+                    "type": "FF",
+                    "value": "string"
+                }
+            ]
+        };
+        // Populate the page with the shipping instruction data
+        const shippingInstruction = JSON.parse(`${JSON.stringify(shippingInstructionData)}`);
+
+        document.getElementById('shippingInstructionReference').textContent = shippingInstruction.shippingInstructionReference;
+        document.getElementById('documentStatus').textContent = shippingInstruction.documentStatus;
+        document.getElementById('shippingInstructionCreatedDateTime').textContent = shippingInstruction.shippingInstructionCreatedDateTime;
+        document.getElementById('shippingInstructionUpdatedDateTime').textContent = shippingInstruction.shippingInstructionUpdatedDateTime;
+        document.getElementById('amendToTransportDocument').textContent = shippingInstruction.amendToTransportDocument;
+        document.getElementById('transportDocumentTypeCode').textContent = shippingInstruction.transportDocumentTypeCode;
+        document.getElementById('isShippedOnBoardType').textContent = shippingInstruction.isShippedOnBoardType;
+        document.getElementById('numberOfCopiesWithCharges').textContent = shippingInstruction.numberOfCopiesWithCharges;
+        document.getElementById('numberOfCopiesWithoutCharges').textContent = shippingInstruction.numberOfCopiesWithoutCharges;
+        document.getElementById('numberOfOriginalsWithCharges').textContent = shippingInstruction.numberOfOriginalsWithCharges;
+        document.getElementById('numberOfOriginalsWithoutCharges').textContent = shippingInstruction.numberOfOriginalsWithoutCharges;
+        document.getElementById('isElectronic').textContent = shippingInstruction.isElectronic;
+        document.getElementById('isToOrder').textContent = shippingInstruction.isToOrder;
+        document.getElementById('displayedNameForPlaceOfReceipt').textContent = shippingInstruction.displayedNameForPlaceOfReceipt.join(', ');
+        document.getElementById('displayedNameForPortOfLoad').textContent = shippingInstruction.displayedNameForPortOfLoad.join(', ');
+        document.getElementById('displayedNameForPortOfDischarge').textContent = shippingInstruction.displayedNameForPortOfDischarge.join(', ');
+        document.getElementById('displayedNameForPlaceOfDelivery').textContent = shippingInstruction.displayedNameForPlaceOfDelivery.join(', ');
+        document.getElementById('carrierBookingReference').textContent = shippingInstruction.carrierBookingReference;
+        document.getElementById('placeOfIssueLocationName').textContent = shippingInstruction.placeOfIssue.locationName;
+        document.getElementById('placeOfIssueUNLocationCode').textContent = shippingInstruction.placeOfIssue.UNLocationCode;
+
+        // Populate the consignment items table
+        const consignmentItemsTable = document.getElementById('consignmentItems');
+        shippingInstruction.consignmentItems.forEach(item => {
+            const row = consignmentItemsTable.insertRow();
+            row.insertCell().textContent = item.carrierBookingReference;
+            row.insertCell().textContent = item.weight;
+            row.insertCell().textContent = item.volume;
+            row.insertCell().textContent = item.weightUnit;
+            row.insertCell().textContent = item.volumeUnit;
+            row.insertCell().textContent = item.descriptionOfGoods;
+            row.insertCell().textContent = item.HSCode;
+        });
+
+        // Populate the utilized transport equipments table
+        const utilizedTransportEquipmentsTable = document.getElementById('utilizedTransportEquipments');
+        shippingInstruction.utilizedTransportEquipments.forEach(equipment => {
+            const row = utilizedTransportEquipmentsTable.insertRow();
+            row.insertCell().textContent = equipment.equipment.equipmentReference;
+            row.insertCell().textContent = equipment.equipment.ISOEquipmentCode;
+            row.insertCell().textContent = equipment.equipment.tareWeight;
+            row.insertCell().textContent = equipment.equipment.weightUnit;
+            row.insertCell().textContent = equipment.cargoGrossWeight;
+            row.insertCell().textContent = equipment.cargoGrossWeightUnit;
+            row.insertCell().textContent = equipment.cargoGrossVolume;
+            row.insertCell().textContent = equipment.cargoGrossVolumeUnit;
+            row.insertCell().textContent = equipment.numberOfPackages;
+            row.insertCell().textContent = equipment.isShipperOwned;
+        });
+
+        // Populate the document parties table
+        const documentPartiesTable = document.getElementById('documentParties');
+        shippingInstruction.documentParties.forEach(party => {
+            const row = documentPartiesTable.insertRow();
+            row.insertCell().textContent = party.party.partyName;
+            row.insertCell().textContent = party.party.taxReference1;
+            row.insertCell().textContent = party.party.taxReference2;
+            row.insertCell().textContent = party.party.publicKey;
+            row.insertCell().textContent = `${party.party.address.name}, ${party.party.address.street} ${party.party.address.streetNumber}, ${party.party.address.floor}, ${party.party.address.postCode} ${party.party.address.city}, ${party.party.address.stateRegion}, ${party.party.address.country}`;
+            row.insertCell().textContent = party.party.partyContactDetails.map(contact => `${contact.name}, ${contact.phone}, ${contact.email}, ${contact.url}`).join(', ');
+            row.insertCell().textContent = party.party.identifyingCodes.map(code => `${code.DCSAResponsibleAgencyCode}, ${code.partyCode}, ${code.codeListName}`).join(', ');
+            row.insertCell().textContent = party.partyFunction;
+            row.insertCell().textContent = party.displayedAddress.join(', ');
+            row.insertCell().textContent = party.isToBeNotified;
+        });
+    </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shipping Instructions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            /* display: flex; */
+            justify-content: center; /* Centers horizontally */
+            align-items: center; /* Centers vertically */
+        }
+
+        html {
+            /* height: 100%; */
+            margin: 0;
+            display: grid;
+            justify-content: center; /* Centers horizontally */
+            align-items: center; /* Centers vertically */
+        }
+
+        h1 {
+            padding: 20px;
+            background-color: #dc3545;
+            color: white;
+            margin: 0;
+            width: 80%;
+            margin-left: 150px;
+        }
+
+        h2 {
+            padding: 20px;
+            background-color: #dc3545;
+            color: white;
+            margin: 0;
+            /* width: 80%;
+            margin-left: 150px; */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            padding: 20px;
+            width: 80%;
+            margin-left: 150px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .document-party {
+            background-color: #f2f2f2;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .document-party h3 {
+            margin-top: 0;
+        }
+
+        .document-party p {
+            margin: 5px 0;
+        }
+
+        .document-party p strong {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Shipping Instructions</h1>
+    <div class="container">
+        <table>
+            <tr>
+                <th>Shipping Instruction Reference</th>
+                <td id="shippingInstructionReference"></td>
+            </tr>
+            <tr>
+                <th>Document Status</th>
+                <td id="documentStatus"></td>
+            </tr>
+            <tr>
+                <th>Shipping Instruction Created Date</th>
+                <td id="shippingInstructionCreatedDateTime"></td>
+            </tr>
+            <tr>
+                <th>Shipping Instruction Updated Date</th>
+                <td id="shippingInstructionUpdatedDateTime"></td>
+            </tr>
+            <tr>
+                <th>Amend to Transport Document</th>
+                <td id="amendToTransportDocument"></td>
+            </tr>
+            <tr>
+                <th>Transport Document Type Code</th>
+                <td id="transportDocumentTypeCode"></td>
+            </tr>
+            <tr>
+                <th>Shipped on Board Type</th>
+                <td id="isShippedOnBoardType"></td>
+            </tr>
+            <tr>
+                <th>Number of Copies with Charges</th>
+                <td id="numberOfCopiesWithCharges"></td>
+            </tr>
+            <tr>
+                <th>Number of Copies without Charges</th>
+                <td id="numberOfCopiesWithoutCharges"></td>
+            </tr>
+            <tr>
+                <th>Number of Originals with Charges</th>
+                <td id="numberOfOriginalsWithCharges"></td>
+            </tr>
+            <tr>
+                <th>Number of Originals without Charges</th>
+                <td id="numberOfOriginalsWithoutCharges"></td>
+            </tr>
+            <tr>
+                <th>Is Electronic</th>
+                <td id="isElectronic"></td>
+            </tr>
+            <tr>
+                <th>Is To Order</th>
+                <td id="isToOrder"></td>
+            </tr>
+            <tr>
+                <th>Displayed Name for Place of Receipt</th>
+                <td id="displayedNameForPlaceOfReceipt"></td>
+            </tr>
+            <tr>
+                <th>Displayed Name for Port of Load</th>
+                <td id="displayedNameForPortOfLoad"></td>
+            </tr>
+            <tr>
+                <th>Displayed Name for Port of Discharge</th>
+                <td id="displayedNameForPortOfDischarge"></td>
+            </tr>
+            <tr>
+                <th>Displayed Name for Place of Delivery</th>
+                <td id="displayedNameForPlaceOfDelivery"></td>
+            </tr>
+            <tr>
+                <th>Carrier Booking Reference</th>
+                <td id="carrierBookingReference"></td>
+            </tr>
+            <tr>
+                <th>Place of Issue</th>
+                <td>
+                    <p><strong>Name:</strong> <span id="placeOfIssueLocationName"></span></p>
+                    <p><strong>Location Code:</strong> Location Code: <span id="placeOfIssueUNLocationCode"></span></p>
+                </td>
+            </tr>
+        </table>
+
+        <h2>Consignment Items</h2>
+        <table>
+            <tr>
+                <th>Carrier Booking Reference</th>
+                <th>Weight</th>
+                <th>Volume</th>
+                <th>Weight Unit</th>
+                <th>Volume Unit</th>
+                <th>Description of Goods</th>
+                <th>HS Code</th>
+            </tr>
+            <tbody id="consignmentItems"></tbody>
+        </table>
+
+        <h2>Utilized Transport Equipments</h2>
+        <table>
+            <tr>
+                <th>Equipment Reference</th>
+                <th>ISO Equipment Code</th>
+                <th>Tare Weight</th>
+                <th>Tare Weight Unit</th>
+                <th>Cargo Gross Weight</th>
+                <th>Cargo Gross Weight Unit</th>
+                <th>Cargo Gross Volume</th>
+                <th>Cargo Gross Volume Unit</th>
+                <th>Number of Packages</th>
+                <th>Is Shipper Owned</th>
+            </tr>
+            <tbody id="utilizedTransportEquipments"></tbody>
+        </table>
+
+        <h2>Document Parties</h2>
+        <div class="document-party">
+            <h3>Party Information</h3>
+            <p><strong>Party Name:</strong> <span id="partyName"></span></p>
+            <p><strong>Tax Reference 1:</strong> <span id="taxReference1"></span></p>
+            <p><strong>Tax Reference 2:</strong> <span id="taxReference2"></span></p>
+            <p><strong>Public Key:</strong> <span id="publicKey"></span></p>
+            <p><strong>Address:</strong> <span id="address"></span></p>
+            <p><strong>Contact Details:</strong> <span id="contactDetails"></span></p>
+            <p><strong>Identifying Codes:</strong> <span id="identifyingCodes"></span></p>
+        </div>
+        <div class="document-party">
+            <h3>Party Function</h3>
+            <p><strong>Party Function:</strong> <span id="partyFunction"></span></p>
+            <p><strong>Displayed Address:</strong> <span id="displayedAddress"></span></p>
+            <p><strong>Is To Be Notified:</strong> <span id="isToBeNotified"></span></p>
+        </div>
+    </div>
+
+    <script>
+
+        var shippingInstructionData = {
+            "shippingInstructionReference": "e0559d83-00e2-438e-afd9-fdd610c1a008",
+            "documentStatus": "RECE",
+            "shippingInstructionCreatedDateTime": "2019-11-12T07:41:00+08:30",
+            "shippingInstructionUpdatedDateTime": "2019-11-12T07:41:00+08:30",
+            "amendToTransportDocument": "string",
+            "transportDocumentTypeCode": "SWB",
+            "isShippedOnBoardType": true,
+            "numberOfCopiesWithCharges": 2,
+            "numberOfCopiesWithoutCharges": 2,
+            "numberOfOriginalsWithCharges": 1,
+            "numberOfOriginalsWithoutCharges": 1,
+            "isElectronic": true,
+            "isToOrder": false,
+            "displayedNameForPlaceOfReceipt": ["string"],
+            "displayedNameForPortOfLoad": ["string"],
+            "displayedNameForPortOfDischarge": ["string"],
+            "displayedNameForPlaceOfDelivery": ["string"],
+            "carrierBookingReference": "ABC709951",
+            "placeOfIssue": {
+                "locationName": "DCSA Headquarters",
+                "UNLocationCode": "NLAMS"
+            },
+            "consignmentItems": [
+                {
+                    "carrierBookingReference": "ABC709951",
+                    "weight": 13000.3,
+                    "volume": 12,
+                    "weightUnit": "KGM",
+                    "volumeUnit": "MTQ",
+                    "descriptionOfGoods": "string",
+                    "HSCode": "string",
+                    "cargoItems": [
+                        {
+                            "cargoLineItems": [
+                                {
+                                    "cargoLineItemID": "string",
+                                    "shippingMarks": "string"
+                                }
+                            ],
+                            "equipmentReference": "APZU4812090",
+                            "weight": 13000.3,
+                            "volume": 12,
+                            "weightUnit": "KGM",
+                            "volumeUnit": "MTQ",
+                            "numberOfPackages": 18,
+                            "packageCode": "5H4",
+                            "packageNameOnBL": "Bags"
+                        }
+                    ],
+                    "references": [
+                        {
+                            "type": "FF",
+                            "value": "string"
+                        }
+                    ]
+                }
+            ],
+            "utilizedTransportEquipments": [
+                {
+                    "equipment": {
+                        "equipmentReference": "APZU4812090",
+                        "ISOEquipmentCode": "22GP",
+                        "tareWeight": 4800,
+                        "weightUnit": "KGM"
+                    },
+                    "cargoGrossWeight": 12000,
+                    "cargoGrossWeightUnit": "KGM",
+                    "cargoGrossVolume": 120,
+                    "cargoGrossVolumeUnit": "MTQ",
+                    "numberOfPackages": 18,
+                    "isShipperOwned": true,
+                    "seals": [
+                        {
+                            "number": "string",
+                            "source": "CUS",
+                            "type": "WIR"
+                        }
+                    ]
+                }
+            ],
+            "documentParties": [
+                {
+                    "party": {
+                        "partyName": "Asseco Denmark",
+                        "taxReference1": "CVR-25645774",
+                        "taxReference2": "CVR-25645774",
+                        "publicKey": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFzaW",
+                        "address": {
+                            "name": "Henrik",
+                            "street": "Kronprinsessegade",
+                            "streetNumber": "54",
+                            "floor": "5. sal",
+                            "postCode": "1306",
+                            "city": "København",
+                            "stateRegion": "N/A",
+                            "country": "Denmark"
+                        },
+                        "partyContactDetails": [
+                            {
+                                "name": "Henrik",
+                                "phone": "+45 33364660",
+                                "email": "info@dcsa.org",
+                                "url": "https://www.dcsa.org"
+                            }
+                        ],
+                        "identifyingCodes": [
+                            {
+                                "DCSAResponsibleAgencyCode": "SMDG",
+                                "partyCode": "MSK",
+                                "codeListName": "LCL"
+                            }
+                        ]
+                    },
+                    "partyFunction": "DDS",
+                    "displayedAddress": [
+                        "Kronprincessegade 54"
+                    ],
+                    "isToBeNotified": true
+                }
+            ],
+            "references": [
+                {
+                    "type": "FF",
+                    "value": "string"
+                }
+            ]
+        };
+        // Populate the page with the shipping instruction data
+        const shippingInstruction = JSON.parse(`${JSON.stringify(shippingInstructionData)}`);
+
+        document.getElementById('shippingInstructionReference').textContent = shippingInstruction.shippingInstructionReference;
+        document.getElementById('documentStatus').textContent = shippingInstruction.documentStatus;
+        document.getElementById('shippingInstructionCreatedDateTime').textContent = shippingInstruction.shippingInstructionCreatedDateTime;
+        document.getElementById('shippingInstructionUpdatedDateTime').textContent = shippingInstruction.shippingInstructionUpdatedDateTime;
+        document.getElementById('amendToTransportDocument').textContent = shippingInstruction.amendToTransportDocument;
+        document.getElementById('transportDocumentTypeCode').textContent = shippingInstruction.transportDocumentTypeCode;
+        document.getElementById('isShippedOnBoardType').textContent = shippingInstruction.isShippedOnBoardType;
+        document.getElementById('numberOfCopiesWithCharges').textContent = shippingInstruction.numberOfCopiesWithCharges;
+        document.getElementById('numberOfCopiesWithoutCharges').textContent = shippingInstruction.numberOfCopiesWithoutCharges;
+        document.getElementById('numberOfOriginalsWithCharges').textContent = shippingInstruction.numberOfOriginalsWithCharges;
+        document.getElementById('numberOfOriginalsWithoutCharges').textContent = shippingInstruction.numberOfOriginalsWithoutCharges;
+        document.getElementById('isElectronic').textContent = shippingInstruction.isElectronic;
+        document.getElementById('isToOrder').textContent = shippingInstruction.isToOrder;
+        document.getElementById('displayedNameForPlaceOfReceipt').textContent = shippingInstruction.displayedNameForPlaceOfReceipt.join(', ');
+        document.getElementById('displayedNameForPortOfLoad').textContent = shippingInstruction.displayedNameForPortOfLoad.join(', ');
+        document.getElementById('displayedNameForPortOfDischarge').textContent = shippingInstruction.displayedNameForPortOfDischarge.join(', ');
+        document.getElementById('displayedNameForPlaceOfDelivery').textContent = shippingInstruction.displayedNameForPlaceOfDelivery.join(', ');
+        document.getElementById('carrierBookingReference').textContent = shippingInstruction.carrierBookingReference;
+        document.getElementById('placeOfIssueLocationName').textContent = shippingInstruction.placeOfIssue.locationName;
+        document.getElementById('placeOfIssueUNLocationCode').textContent = shippingInstruction.placeOfIssue.UNLocationCode;
+
+        // Populate the consignment items table
+        const consignmentItemsTable = document.getElementById('consignmentItems');
+        shippingInstruction.consignmentItems.forEach(item => {
+            const row = consignmentItemsTable.insertRow();
+            row.insertCell().textContent = item.carrierBookingReference;
+            row.insertCell().textContent = item.weight;
+            row.insertCell().textContent = item.volume;
+            row.insertCell().textContent = item.weightUnit;
+            row.insertCell().textContent = item.volumeUnit;
+            row.insertCell().textContent = item.descriptionOfGoods;
+            row.insertCell().textContent = item.HSCode;
+        });
+
+        // Populate the utilized transport equipments table
+        const utilizedTransportEquipmentsTable = document.getElementById('utilizedTransportEquipments');
+        shippingInstruction.utilizedTransportEquipments.forEach(equipment => {
+            const row = utilizedTransportEquipmentsTable.insertRow();
+            row.insertCell().textContent = equipment.equipment.equipmentReference;
+            row.insertCell().textContent = equipment.equipment.ISOEquipmentCode;
+            row.insertCell().textContent = equipment.equipment.tareWeight;
+            row.insertCell().textContent = equipment.equipment.weightUnit;
+            row.insertCell().textContent = equipment.cargoGrossWeight;
+            row.insertCell().textContent = equipment.cargoGrossWeightUnit;
+            row.insertCell().textContent = equipment.cargoGrossVolume;
+            row.insertCell().textContent = equipment.cargoGrossVolumeUnit;
+            row.insertCell().textContent = equipment.numberOfPackages;
+            row.insertCell().textContent = equipment.isShipperOwned;
+        });
+
+        // Populate the document parties table
+        const documentParties = shippingInstruction.documentParties[0];
+        document.getElementById('partyName').textContent = documentParties.party.partyName;
+        document.getElementById('taxReference1').textContent = documentParties.party.taxReference1;
+        document.getElementById('taxReference2').textContent = documentParties.party.taxReference2;
+        document.getElementById('publicKey').textContent = documentParties.party.publicKey;
+        document.getElementById('address').textContent = `${documentParties.party.address.name}, ${documentParties.party.address.street} ${documentParties.party.address.streetNumber}, ${documentParties.party.address.floor}, ${documentParties.party.address.postCode} ${documentParties.party.address.city}, ${documentParties.party.address.stateRegion}, ${documentParties.party.address.country}`;
+        document.getElementById('contactDetails').textContent = documentParties.party.partyContactDetails.map(contact => `${contact.name}, ${contact.phone}, ${contact.email}, ${contact.url}`).join(', ');
+        document.getElementById('identifyingCodes').textContent = documentParties.party.identifyingCodes.map(code => `${code.DCSAResponsibleAgencyCode}, ${code.partyCode}, ${code.codeListName}`).join(', ');
+        document.getElementById('partyFunction').textContent = documentParties.partyFunction;
+        document.getElementById('displayedAddress').textContent = documentParties.displayedAddress.join(', ');
+        document.getElementById('isToBeNotified').textContent = documentParties.isToBeNotified;
+    </script>
+</body>
+</html>
