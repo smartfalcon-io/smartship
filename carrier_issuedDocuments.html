@@ -289,10 +289,10 @@
                                                 <ul class="submenu">
                                                     <li><a href="shipper_login.html">Shipper</a></li>
                                                     <li><a href="carrier_login.html">Carrier</a></li>
-                                                    <li><a href="bank_login.html">Bank</a></li>
+                                                    <li><a href="banker_login.html">Bank</a></li>
                                                     <li><a href="insurer_login.html">Insurer</a></li>
                                                     <li><a href="customs_login.html">Customs</a></li>
-                                                    <li><a href="terminal_home.html">Terminal</a></li>
+                                                    <li><a href="terminal_login.html">Terminal</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -344,11 +344,11 @@
                 <!-- Shipping instructions menu -->
                 <div class="menu">
                     <!-- <button>Shipping Instructions</button> -->
-                    <button onclick="window.location.href = '#';">Transport Document</button>
+                    <button onclick="window.location.href = 'carrier_td_home.html';">Transport Document</button>
                     <button onclick="window.location.href = 'carrier_issReq.html';">Issue Request</button>
                     <button onclick="window.location.href = 'carrier_issRes.html';">Issue Response</button>
                     <button onclick="window.location.href = 'carrier_surrReq.html';">Surrender Request</button>
-                    <button onclick="window.location.href = 'carrier_issRes.html';">Surrender Response</button>
+                    <button onclick="window.location.href = 'carrier_surrRes.html';">Surrender Response</button>
                     <button class="highlighted" onclick="window.location.href = 'carrier_issuedDocuments.html';">Issued Documents</button>
                     <button onclick="window.location.href = 'carrier_amends_req.html';">Amends Request</button>
                 </div>
@@ -356,10 +356,7 @@
 
             <!-- Main Content Column -->
             <div class="col-lg-9">
-                <div class="button-container" >
-                    <button id="home-link" class="btn btn-danger"><a href="shipper_home.html">Home</a></button>
-                    <button id="create-link" class="btn btn-danger" style="margin-left: 100px;"><a href="siForm.html">Create</a></button>
-                </div>
+                
                 <div class="search-container">
                     <input type="text" placeholder="Search...">
                     <button type="submit">Search</button>
@@ -371,7 +368,7 @@
                         <th>Carrier Booking Reference</th>
                         <th>Document Status</th>
                     </tr>
-                    <tr class="navigator-row" data-href="shipper_si.html">
+                    <tr class="navigator-row" data-href="carrier_issued_td.html">
                         <td>01</td>
                         <td>TD-ABC-123-456-789</td>
                         <td>XYZ12345</td>
@@ -387,6 +384,18 @@
     </div>
 </section>
 <!-- End Shipping Instructions Form -->
+
+<script>
+    // Add event listener to each row
+    document.querySelectorAll('.navigator-row').forEach(row => {
+        row.addEventListener('click', function() {
+            // Get the URL from the data-href attribute
+            const url = this.getAttribute('data-href');
+            // Navigate to the URL
+            window.location.href = url;
+        });
+    });
+</script>
 
 
     <!-- footer start -->

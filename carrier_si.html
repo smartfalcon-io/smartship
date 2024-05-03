@@ -152,10 +152,10 @@
                                                 <ul class="submenu">
                                                     <li><a href="shipper_login.html">Shipper</a></li>
                                                     <li><a href="carrier_login.html">Carrier</a></li>
-                                                    <li><a href="bank_login.html">Bank</a></li>
+                                                    <li><a href="banker_login.html">Bank</a></li>
                                                     <li><a href="insurer_login.html">Insurer</a></li>
                                                     <li><a href="customs_login.html">Customs</a></li>
-                                                    <li><a href="terminal_home.html">Terminal</a></li>
+                                                    <li><a href="terminal_login.html">Terminal</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -241,7 +241,7 @@
                 <th>Shipped on Board Type</th>
                 <td id="isShippedOnBoardType"></td>
             </tr>
-            <!-- <tr>
+            <tr>
                 <th>Number of Copies with Charges</th>
                 <td id="numberOfCopiesWithCharges"></td>
             </tr>
@@ -256,15 +256,15 @@
             <tr>
                 <th>Number of Originals without Charges</th>
                 <td id="numberOfOriginalsWithoutCharges"></td>
-            </tr> -->
+            </tr>
             <tr>
                 <th>Is Electronic</th>
                 <td id="isElectronic"></td>
             </tr>
-            <!-- <tr>
+            <tr>
                 <th>Is To Order</th>
                 <td id="isToOrder"></td>
-            </tr> -->
+            </tr>
             <tr>
                 <th>Displayed Name for Place of Receipt</th>
                 <td id="displayedNameForPlaceOfReceipt"></td>
@@ -294,7 +294,7 @@
             </tr>
         </table>
 
-        <!-- <h2>Consignment Items</h2>
+        <h2>Consignment Items</h2>
         <table>
             <tr>
                 <th>Carrier Booking Reference</th>
@@ -322,7 +322,7 @@
                 <th>Package Name on BL</th>
             </tr>
             <tbody id="cargoItems"></tbody>
-        </table> -->
+        </table>
 
         <h2>Utilized Transport Equipments</h2>
         <table>
@@ -368,7 +368,7 @@
             </tr>
             <tbody id="address"></tbody>
         </table>
-        <!-- <h3></h3>
+        <h3></h3>
         <h4>Party Contact Details</h4>
         <table>
             <tr>
@@ -407,7 +407,7 @@
                 <th>value</th>
             </tr>
             <tbody id="references"></tbody>
-        </table> -->
+        </table>
     </div>
 
     <div class="col-md-12 mb-20">
@@ -416,8 +416,8 @@
 
     <div class="col-md-12 mb-20">
         <div class="d-flex justify-content-center">
-            <a class="btn" style="background-color: #009ee3; border-color: #009ee3; color: #fff; margin-right: 30px;" href="si_update.html">Upadte</a>
-            <a class="btn" style="background-color: #009ee3; border-color: #009ee3; color: #fff;" href="si_update.html">Create document</a>
+            <a class="btn" style="background-color: #009ee3; border-color: #009ee3; color: #fff; margin-right: 30px;" href="carrier_si_home.html">Upadte</a>
+            <a class="btn" style="background-color: #009ee3; border-color: #009ee3; color: #fff;" href="carrier_td_home.html">Create document</a>
         </div>
     </div>
 
@@ -561,12 +561,12 @@
         document.getElementById('amendToTransportDocument').textContent = shippingInstruction.amendToTransportDocument;
         document.getElementById('transportDocumentTypeCode').textContent = shippingInstruction.transportDocumentTypeCode;
         document.getElementById('isShippedOnBoardType').textContent = shippingInstruction.isShippedOnBoardType;
-        // document.getElementById('numberOfCopiesWithCharges').textContent = shippingInstruction.numberOfCopiesWithCharges;
-        // document.getElementById('numberOfCopiesWithoutCharges').textContent = shippingInstruction.numberOfCopiesWithoutCharges;
-        // document.getElementById('numberOfOriginalsWithCharges').textContent = shippingInstruction.numberOfOriginalsWithCharges;
-        // document.getElementById('numberOfOriginalsWithoutCharges').textContent = shippingInstruction.numberOfOriginalsWithoutCharges;
+        document.getElementById('numberOfCopiesWithCharges').textContent = shippingInstruction.numberOfCopiesWithCharges;
+        document.getElementById('numberOfCopiesWithoutCharges').textContent = shippingInstruction.numberOfCopiesWithoutCharges;
+        document.getElementById('numberOfOriginalsWithCharges').textContent = shippingInstruction.numberOfOriginalsWithCharges;
+        document.getElementById('numberOfOriginalsWithoutCharges').textContent = shippingInstruction.numberOfOriginalsWithoutCharges;
         document.getElementById('isElectronic').textContent = shippingInstruction.isElectronic;
-        // document.getElementById('isToOrder').textContent = shippingInstruction.isToOrder;
+        document.getElementById('isToOrder').textContent = shippingInstruction.isToOrder;
         document.getElementById('displayedNameForPlaceOfReceipt').textContent = shippingInstruction.displayedNameForPlaceOfReceipt.join(', ');
         document.getElementById('displayedNameForPortOfLoad').textContent = shippingInstruction.displayedNameForPortOfLoad.join(', ');
         document.getElementById('displayedNameForPortOfDischarge').textContent = shippingInstruction.displayedNameForPortOfDischarge.join(', ');
@@ -575,42 +575,42 @@
         document.getElementById('placeOfIssueLocationName').textContent = shippingInstruction.placeOfIssue.locationName;
         document.getElementById('placeOfIssueUNLocationCode').textContent = shippingInstruction.placeOfIssue.UNLocationCode;
 
-    //     // Populate the consignment items table
-    //     const consignmentItemsTable = document.getElementById('consignmentItems');
-    //     const cargoItemsTableBody = document.getElementById('cargoItems');
-    //     shippingInstruction.consignmentItems.forEach(item => {
-    //         const row = consignmentItemsTable.insertRow();
-    //         row.insertCell().textContent = item.carrierBookingReference;
-    //         row.insertCell().textContent = item.weight;
-    //         row.insertCell().textContent = item.volume;
-    //         row.insertCell().textContent = item.weightUnit;
-    //         row.insertCell().textContent = item.volumeUnit;
-    //         row.insertCell().textContent = item.descriptionOfGoods;
-    //         row.insertCell().textContent = item.HSCode;
+        // Populate the consignment items table
+        const consignmentItemsTable = document.getElementById('consignmentItems');
+        const cargoItemsTableBody = document.getElementById('cargoItems');
+        shippingInstruction.consignmentItems.forEach(item => {
+            const row = consignmentItemsTable.insertRow();
+            row.insertCell().textContent = item.carrierBookingReference;
+            row.insertCell().textContent = item.weight;
+            row.insertCell().textContent = item.volume;
+            row.insertCell().textContent = item.weightUnit;
+            row.insertCell().textContent = item.volumeUnit;
+            row.insertCell().textContent = item.descriptionOfGoods;
+            row.insertCell().textContent = item.HSCode;
 
-    //         const cargoItemsCell = row.insertCell();
+            const cargoItemsCell = row.insertCell();
 
-    // // Populate the cargo items table
-    // item.cargoItems.forEach(cargoItem => {
-    //     const cargoRow = cargoItemsTableBody.insertRow();
-    //     cargoRow.insertCell().textContent = cargoItem.cargoLineItems.cargoLineItemID;
-    //     cargoRow.insertCell().textContent = cargoItem.cargoLineItems.shippingMarks;
-    //     cargoRow.insertCell().textContent = cargoItem.equipmentReference;
-    //     cargoRow.insertCell().textContent = cargoItem.weight;
-    //     cargoRow.insertCell().textContent = cargoItem.volume;
-    //     cargoRow.insertCell().textContent = cargoItem.weightUnit;
-    //     cargoRow.insertCell().textContent = cargoItem.volumeUnit;
-    //     cargoRow.insertCell().textContent = cargoItem.numberOfPackages;
-    //     cargoRow.insertCell().textContent = cargoItem.packageCode;
-    //     cargoRow.insertCell().textContent = cargoItem.packageNameOnBL;
+    // Populate the cargo items table
+    item.cargoItems.forEach(cargoItem => {
+        const cargoRow = cargoItemsTableBody.insertRow();
+        cargoRow.insertCell().textContent = cargoItem.cargoLineItems.cargoLineItemID;
+        cargoRow.insertCell().textContent = cargoItem.cargoLineItems.shippingMarks;
+        cargoRow.insertCell().textContent = cargoItem.equipmentReference;
+        cargoRow.insertCell().textContent = cargoItem.weight;
+        cargoRow.insertCell().textContent = cargoItem.volume;
+        cargoRow.insertCell().textContent = cargoItem.weightUnit;
+        cargoRow.insertCell().textContent = cargoItem.volumeUnit;
+        cargoRow.insertCell().textContent = cargoItem.numberOfPackages;
+        cargoRow.insertCell().textContent = cargoItem.packageCode;
+        cargoRow.insertCell().textContent = cargoItem.packageNameOnBL;
 
-    //     // Populate the cargo line items
-    //     // const cargoLineItemsCell = cargoRow.insertCell();
-    //     // cargoItem.cargoLineItems.forEach(lineItem => {
-    //     //     cargoLineItemsCell.innerHTML += `<p><strong>Cargo Line Item ID:</strong> ${lineItem.cargoLineItemID}, <strong>Shipping Marks:</strong> ${lineItem.shippingMarks}</p>`;
-    //     // });
-    // });
-    //     });
+        // Populate the cargo line items
+        // const cargoLineItemsCell = cargoRow.insertCell();
+        // cargoItem.cargoLineItems.forEach(lineItem => {
+        //     cargoLineItemsCell.innerHTML += `<p><strong>Cargo Line Item ID:</strong> ${lineItem.cargoLineItemID}, <strong>Shipping Marks:</strong> ${lineItem.shippingMarks}</p>`;
+        // });
+    });
+        });
 
         // Populate the utilized transport equipments table
         const utilizedTransportEquipmentsTable = document.getElementById('utilizedTransportEquipments');
