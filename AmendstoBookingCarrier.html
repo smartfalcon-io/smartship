@@ -339,7 +339,7 @@
                 <th>carrier Service Code</th>
                 <td id="carrierServiceCode"></td>
             </tr>
-            <tr>
+            <!-- <tr>
                 <th>universal Service Reference</th>
                 <td id="universalServiceReference"></td>
             </tr>
@@ -452,7 +452,7 @@
                     <p><strong>locationName:</strong> <span id="placeOfIssueBLLocationName"></span></p>
                     <p><strong>UNLocationCode:</strong> <span id="placeOfBLIssueUNLocationCode"></span></p>
                 </td>
-            </tr>
+            </tr> -->
         </table>
 
         <h2>commodities</h2>
@@ -472,7 +472,7 @@
 
         </table>
 
-         <h2>valueAddedServices</h2>
+         <!-- <h2>valueAddedServices</h2>
         <table>
             <tr>
                 <th>valueAddedServiceCode</th>
@@ -480,16 +480,16 @@
                 <th>value</th>
             </tr>
             <tbody id="valueaddedservices"></tbody>
-        </table>  
-        <h2>references</h2>
+        </table>   -->
+        <!-- <h2>references</h2>
         <table>
             <tr>
                 <th>type</th>
                 <th>value</th>
             </tr>           
             <tbody id="references"></tbody>
-        </table>
-        <h2>requestedEquipments</h2>
+        </table> -->
+        <!-- <h2>requestedEquipments</h2>
         <table>
             <tr>
                 <th>ISOEquipmentCode</th>
@@ -502,10 +502,10 @@
             </tr>
             <tbody id="requestedEquipments"></tbody>
 
-        </table> 
+        </table>  -->
 
-        <h2>Document Parties</h2>
-        <!-- <h3></h3> -->
+        <!-- <h2>Document Parties</h2>
+         
         <h4>Party</h4>
         <table>
             <tr>
@@ -563,8 +563,8 @@
             </tr>
             <tbody id="partie"></tbody>
 
-        </table>
-        <h2>shipmentLocations</h2>
+        </table> -->
+        <!-- <h2>shipmentLocations</h2>
         <h3>location</h3>
         <table>
             <tr>
@@ -572,11 +572,10 @@
                 <th>UNLocationCode</th>
                 <th>facilityCode</th>
                 <th>facilityCodeListProvider</th>
-                <!-- <th>shipmentLocationTypeCode</th> -->
-                <!-- <th>eventDateTime</th> -->
+                
             </tr>
             <tbody id="shipmentLocations"></tbody>
-        </table>
+        </table> -->
         <h3>shipmentLocation</h3>
         <table>
             <tr>
@@ -749,36 +748,36 @@
         document.getElementById('vesselName').textContent = BookingData.vesselName;
         document.getElementById('carrierServiceName').textContent = BookingData.carrierServiceName;
         document.getElementById('carrierServiceCode').textContent = BookingData.carrierServiceCode;
-        document.getElementById('universalServiceReference').textContent = BookingData.universalServiceReference;
-        document.getElementById('carrierExportVoyageNumber').textContent = BookingData.carrierExportVoyageNumber;
-        document.getElementById('universalExportVoyageReference').textContent = BookingData.universalExportVoyageReference
-        document.getElementById('carrierExportVoyageNumber').textContent = BookingData.carrierExportVoyageNumber;
-        document.getElementById('declaredValue').textContent = BookingData.declaredValue;
-        document.getElementById('declaredValueCurrency').textContent = BookingData.declaredValueCurrency;
-        document.getElementById('paymentTermCode').textContent = BookingData.paymentTermCode;
-        document.getElementById('isPartialLoadAllowed').textContent = BookingData.isPartialLoadAllowed;
-        document.getElementById('isExportDeclarationRequired').textContent = BookingData.isExportDeclarationRequired;
-        document.getElementById('exportDeclarationReference').textContent = BookingData.exportDeclarationReference;
-        document.getElementById('isImportLicenseRequired').textContent = BookingData.isImportLicenseRequired;
-        document.getElementById('importLicenseReference').textContent = BookingData.importLicenseReference;
-        document.getElementById('isCustomsFilingSubmissionByShipper').textContent = BookingData.isCustomsFilingSubmissionByShipper;
-        document.getElementById('contractQuotationReference').textContent = BookingData.contractQuotationReference;
-        document.getElementById('expectedDepartureDate').textContent = BookingData.expectedDepartureDate;
-        document.getElementById('expectedArrivalAtPlaceOfDeliveryStartDate').textContent = BookingData.expectedArrivalAtPlaceOfDeliveryStartDate;
-        document.getElementById('expectedArrivalAtPlaceOfDeliveryEndDate').textContent = BookingData.expectedArrivalAtPlaceOfDeliveryEndDate;
-        document.getElementById('transportDocumentTypeCode').textContent = BookingData.transportDocumentTypeCode;
-        document.getElementById('transportDocumentReference').textContent = BookingData.transportDocumentReference;
-        document.getElementById('bookingChannelReference').textContent = BookingData.bookingChannelReference;
-        document.getElementById('incoTerms').textContent = BookingData.incoTerms;
-        document.getElementById('communicationChannelCode').textContent = BookingData.communicationChannelCode;
-        document.getElementById('isEquipmentSubstitutionAllowed').textContent = BookingData.isEquipmentSubstitutionAllowed;
-        document.getElementById('preCarriageModeOfTransportCode').textContent = BookingData.preCarriageModeOfTransportCode;
-        document.getElementById('isAMSACIFilingRequired').textContent = BookingData.isAMSACIFilingRequired;
-        document.getElementById('vesselIMONumber').textContent = BookingData.vesselIMONumber;
-        document.getElementById('InvoicePayableAtLocationName').textContent = BookingData.invoicePayableAt.locationName;
-        document.getElementById('InvoicePayableAtUNLocationCode').textContent = BookingData.invoicePayableAt.UNLocationCode;
-        document.getElementById('placeOfIssueBLLocationName').textContent = BookingData.placeOfBLIssue.locationName;
-        document.getElementById('placeOfBLIssueUNLocationCode').textContent = BookingData.placeOfBLIssue.UNLocationCode;
+        // document.getElementById('universalServiceReference').textContent = BookingData.universalServiceReference;
+        // document.getElementById('carrierExportVoyageNumber').textContent = BookingData.carrierExportVoyageNumber;
+        // document.getElementById('universalExportVoyageReference').textContent = BookingData.universalExportVoyageReference
+        // document.getElementById('carrierExportVoyageNumber').textContent = BookingData.carrierExportVoyageNumber;
+        // document.getElementById('declaredValue').textContent = BookingData.declaredValue;
+        // document.getElementById('declaredValueCurrency').textContent = BookingData.declaredValueCurrency;
+        // document.getElementById('paymentTermCode').textContent = BookingData.paymentTermCode;
+        // document.getElementById('isPartialLoadAllowed').textContent = BookingData.isPartialLoadAllowed;
+        // document.getElementById('isExportDeclarationRequired').textContent = BookingData.isExportDeclarationRequired;
+        // document.getElementById('exportDeclarationReference').textContent = BookingData.exportDeclarationReference;
+        // document.getElementById('isImportLicenseRequired').textContent = BookingData.isImportLicenseRequired;
+        // document.getElementById('importLicenseReference').textContent = BookingData.importLicenseReference;
+        // document.getElementById('isCustomsFilingSubmissionByShipper').textContent = BookingData.isCustomsFilingSubmissionByShipper;
+        // document.getElementById('contractQuotationReference').textContent = BookingData.contractQuotationReference;
+        // document.getElementById('expectedDepartureDate').textContent = BookingData.expectedDepartureDate;
+        // document.getElementById('expectedArrivalAtPlaceOfDeliveryStartDate').textContent = BookingData.expectedArrivalAtPlaceOfDeliveryStartDate;
+        // document.getElementById('expectedArrivalAtPlaceOfDeliveryEndDate').textContent = BookingData.expectedArrivalAtPlaceOfDeliveryEndDate;
+        // document.getElementById('transportDocumentTypeCode').textContent = BookingData.transportDocumentTypeCode;
+        // document.getElementById('transportDocumentReference').textContent = BookingData.transportDocumentReference;
+        // document.getElementById('bookingChannelReference').textContent = BookingData.bookingChannelReference;
+        // document.getElementById('incoTerms').textContent = BookingData.incoTerms;
+        // document.getElementById('communicationChannelCode').textContent = BookingData.communicationChannelCode;
+        // document.getElementById('isEquipmentSubstitutionAllowed').textContent = BookingData.isEquipmentSubstitutionAllowed;
+        // document.getElementById('preCarriageModeOfTransportCode').textContent = BookingData.preCarriageModeOfTransportCode;
+        // document.getElementById('isAMSACIFilingRequired').textContent = BookingData.isAMSACIFilingRequired;
+        // document.getElementById('vesselIMONumber').textContent = BookingData.vesselIMONumber;
+        // document.getElementById('InvoicePayableAtLocationName').textContent = BookingData.invoicePayableAt.locationName;
+        // document.getElementById('InvoicePayableAtUNLocationCode').textContent = BookingData.invoicePayableAt.UNLocationCode;
+        // document.getElementById('placeOfIssueBLLocationName').textContent = BookingData.placeOfBLIssue.locationName;
+        // document.getElementById('placeOfBLIssueUNLocationCode').textContent = BookingData.placeOfBLIssue.UNLocationCode;
 
 
         // Populate the consignment items table
