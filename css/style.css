@@ -27,6 +27,150 @@ body {
   color: #6f6f6f;
 }
 
+.faq-container {
+  margin-left: -8px;
+  margin-right: -8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: #009ee3;
+  color: #f7fafc;
+  padding: 5% 0;
+}
+
+.faq-content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.faq-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.faq-header-content {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.faq-subheading {
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 1.25;
+  color: #ffffff;
+}
+
+.faq-heading {
+  width: 100%;
+  font-weight: 600;
+  font-size: 3.25rem;
+  line-height: 1.25;
+  color: #ffffff;
+}
+
+.faq-description {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.faqs-container {
+  margin-top: 1.5rem;
+  max-width: 60rem;
+  position: relative;
+}
+
+.faq {
+  cursor: pointer;
+  user-select: none;
+  margin-top: 0.625rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1rem;
+  border-radius: 0.5rem;
+  color: #4a5568;
+  background-color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* .faq:hover {
+  color: #1a202c;
+  background-color: #b3e8ff;
+} */
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.question-toggle-icon {
+  margin-left: 0.5rem;
+  transition: transform 0.02s;
+}
+
+.answer {
+  pointer-events: none;
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0;
+  height: 0;
+  margin-top: 0;
+  transition: opacity 0.3s, height 0.3s, margin-top 0.3s;
+}
+
+.answer.open {
+  opacity: 1;
+  height: auto;
+  margin-top: 1rem;
+}
+
+.decorator-blob-1 {
+  pointer-events: none;
+  z-index: -20;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 14rem;
+  width: 14rem;
+  opacity: 0.15;
+  transform: translateX(66.6666667%) translateY(-12%);
+  fill: #38b2ac;
+}
+
+.decorator-blob-2 {
+  pointer-events: none;
+  z-index: -20;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 16rem;
+  width: 16rem;
+  opacity: 0.15;
+  transform: translateX(-66.6666667%);
+  fill: #a0aec0;
+}
+
+/* Rotate the chevron-down icon */
+.dropdown-indicator svg {
+transform: rotate(0deg);
+transition: transform 0.3s ease-in-out;
+}
+
+/* Rotate the chevron-down icon by 180 degrees when the question is opened */
+.question.open .dropdown-indicator svg {
+transform: rotate(180deg);
+}
+
 /* a {
   color: #6f6f6f;
 } */

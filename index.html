@@ -71,7 +71,7 @@
                                             <li><a href="resources.html">resources</a></li>
                                             <li><a href="blog_home.html">blogs</a></li>
                                             <li><a href="contact.html">Contact</a></li>
-                                            <li><a href="#">login <i class="ti-angle-down"></i></a>
+                                            <!-- <li><a href="#">login <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
                                                     <li><a href="shipper_login.html">Shipper</a></li>
                                                     <li><a href="carrier_login.html">Carrier</a></li>
@@ -80,7 +80,7 @@
                                                     <li><a href="customs_login.html">Customs</a></li>
                                                     <li><a href="terminal_login.html">Terminal</a></li>
                                                 </ul>
-                                            </li>
+                                            </li> -->
                                         </ul>
                                     </nav>
                                 </div>
@@ -560,6 +560,102 @@
 
     <!--/ contact_location  -->
 
+    <div class="faq-container">
+        <div class="faq-content">
+          <div class="faq-column">
+            <div class="faq-header-content">
+              <h2 class="faq-subheading">FAQS</h2>
+              <h1 class="faq-heading">You have Questions ?</h1>
+              <p class="faq-description">And we have got answers to all of them.</p>
+            </div>
+            <dl class="faqs-container">
+              <div class="faq" onclick="toggleQuestion(0)">
+                <div class="question">
+                  <span class="question-text">What is an electronic Bill of Lading (e-BL)?</span>
+                  <span class="question-toggle-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6"><path d="M12 5v14l-6.5-7L12 5z" /></svg></span>
+                    <span class="dropdown-indicator"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6"><path id="chevron-down" d="M12 5v14l-6.5-7L12 5z" /></svg></span>            
+                </div>
+                <div class="answer" id="answer0">
+                    An electronic Bill of Lading (e-BL) is a digital version of a traditional paper Bill of Lading, which serves as a legal document acknowledging the receipt of goods for shipment. It contains information about the cargo, the consignee, the shipper, and the terms of the transportation contract.
+                </div>
+              </div>
+              <div class="faq" onclick="toggleQuestion(1)">
+                <div class="question">
+                  <span class="question-text">How does an electronic Bill of Lading work?</span>
+                  <span class="question-toggle-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6"><path d="M12 5v14l-6.5-7L12 5z" /></svg></span>
+                </div>
+                <div class="answer" id="answer1">
+                    An e-BL is created, signed, and transmitted electronically using specialized software or platforms. It provides the same legal function as a paper Bill of Lading but in a digital format. Once created and signed, it can be securely transmitted to relevant parties involved in the shipment process.
+                </div>
+              </div>
+              <div class="faq" onclick="toggleQuestion(2)">
+                <div class="question">
+                  <span class="question-text">What are the benefits of using electronic Bills of Lading?</span>
+                  <span class="question-toggle-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6"><path d="M12 5v14l-6.5-7L12 5z" /></svg></span>
+                </div>
+                <div class="answer" id="answer2">
+                    Electronic Bills of Lading offer several advantages over traditional paper-based ones, including reduced paperwork, faster processing times, lower costs, improved security, and enhanced traceability and transparency throughout the shipment process.
+                </div>
+              </div>
+              <div class="faq" onclick="toggleQuestion(3)">
+                <div class="question">
+                  <span class="question-text">How secure are electronic Bills of Lading compared to paper-based ones?</span>
+                  <span class="question-toggle-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6"><path d="M12 5v14l-6.5-7L12 5z" /></svg></span>
+                </div>
+                <div class="answer" id="answer3">
+                    Electronic Bills of Lading can offer higher levels of security compared to paper-based ones due to features such as encryption, digital signatures, and blockchain technology, which help prevent unauthorized access, tampering, or fraud.
+                </div>
+              </div>
+              <div class="faq" onclick="toggleQuestion(4)">
+                <div class="question">
+                  <span class="question-text">How widespread is the adoption of electronic Bills of Lading in the shipping industry?</span>
+                  <span class="question-toggle-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6"><path d="M12 5v14l-6.5-7L12 5z" /></svg></span>
+                </div>
+                <div class="answer" id="answer4">
+                    The adoption of electronic Bills of Lading is gradually increasing in the shipping industry, driven by factors such as the need for digital transformation, cost savings, and efficiency gains. However, it varies by region, with some countries and companies embracing e-BLs more rapidly than others.
+                </div>
+              </div>
+            </dl>
+            <div class="faq-header-content">
+                <h2 class="faq-subheading">You still have Questions ?</h2>
+                <!-- <h1 class="faq-heading">You still have Questions ?</h1> -->
+                <p class="faq-description"><a href="contact.html">Contact Us</a></p>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleQuestion(index) {
+            var answer = document.getElementById("answer" + index);
+            var question = document.querySelectorAll(".question")[index];
+    
+            var allAnswers = document.querySelectorAll(".answer");
+    
+            // Close all FAQ items except the one clicked
+            allAnswers.forEach(function(item, i) {
+                if (i !== index) {
+                    item.style.opacity = "0";
+                    item.style.height = "0";
+                    item.style.marginTop = "0";
+                    question.classList.remove("open");
+                }
+            });
+    
+            // Toggle the clicked FAQ item
+            if (answer.style.opacity === "1") {
+                answer.style.opacity = "0";
+                answer.style.height = "0";
+                answer.style.marginTop = "0";
+                question.classList.remove("open");
+            } else {
+                answer.style.opacity = "1";
+                answer.style.height = "auto";
+                answer.style.marginTop = "1rem";
+                question.classList.add("open");
+            }
+        }
+    </script>
 
     <!-- footer start -->
     <footer class="footer-modern-dark bg-extra-dark-gray padding-five-tb sm-padding-30px-tb">
