@@ -27,6 +27,33 @@ body {
   color: #6f6f6f;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  /* Vertical center alignment */
+}
+
+.logo-name {
+  font-weight: bolder;
+  font-size: x-large;
+  color: #001D38;
+  margin-left: 10px;
+  /* Adjust spacing between image and text */
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  /* Vertical center alignment */
+}
+
+.footer-logo-name {
+  font-weight: bolder;
+  font-size: x-large;
+  color: #6f6f6f;
+  margin-left: 10px;
+}
+
 .faq-container {
   margin-left: -8px;
   margin-right: -8px;
