@@ -181,6 +181,7 @@
                                     <a href="index.html">
                                         <img src="img/logo.png" alt="">
                                     </a>
+                                    <span class="logo-name">SmartShip</span>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 d-none d-lg-block">
@@ -469,8 +470,6 @@
         <table>
             <tr>
                 <th>valueAddedServiceCode</th>
-                 <!-- <th>type</th>
-                <th>value</th> -->
             </tr>
             <tbody id="valueaddedservices"></tbody>
         </table> 
@@ -936,11 +935,7 @@
             row.insertCell().textContent = item.exportLicenseIssueDate;
             row.insertCell().textContent = item.exportLicenseExpiryDate;
             row.insertCell().textContent = item.commodityRequestedEquipmentLink;
-        // Populate the cargo line items
-    //     const cargoLineItemsCell = cargoRow.insertCell();
-    //     cargoItem.cargoLineItems.forEach(lineItem => {
-    //         cargoLineItemsCell.innerHTML += `<p><strong>Cargo Line Item ID:</strong> ${lineItem.cargoLineItemID}, <strong>Shipping Marks:</strong> ${lineItem.shippingMarks}</p>`;
-    //     });
+        
     });
     const valueAddedServices = document.getElementById('valueaddedservices');
     BookingData.valueAddedServices.forEach(value => {
@@ -1116,9 +1111,12 @@ const CarrierClauses = document.getElementById('carrierClauses');
             <div class="row align-items-center">
                 <!-- start logo -->
                 <div class="col-lg-3 col-md-12 md-text-center md-margin-50px-bottom sm-margin-30px-bottom">
-                    <a href="index.html"><img class="footer-logo" src="img/logo.png" data-rjs="images/logo-white@2x.png" alt="Seamless blockchain and distributed ledger solutions"></a>
-                    <a></a>
-                </div> 
+                    <div class="footer-logo">
+                        <a href="index.html"><img src="img/logo.png" data-rjs="images/logo-white@2x.png"
+                                alt="Seamless blockchain and distributed ledger solutions"></a>
+                        <span class="footer-logo-name">SmartShip</span>
+                    </div>
+                </div>
                 <!-- end logo -->
                 <!-- start copyright -->
                 <div class="col-lg-4 col-md-5 col-12 sm-margin-30px-bottom text-medium sm-text-center">

@@ -54,23 +54,9 @@
     </style> -->
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            /* display: flex; */
-            justify-content: center; /* Centers horizontally */
-            align-items: center; /* Centers vertically */
-            /* max-width: 80%; */
-        }
+       
 
-        html {
-            /* height: 100%; */
-            margin: 0;
-            display: grid;
-            justify-content: center; /* Centers horizontally */
-            align-items: center; /* Centers vertically */
-        }
+       
 
         h1 {
             padding: 20px;
@@ -166,6 +152,7 @@
     #furthersteps{
         margin-left: 70px;
     }
+   
 
 
     </style>
@@ -211,6 +198,7 @@
                                 <a href="index.html">
                                     <img src="img/logo.png" alt="">
                                 </a>
+                                <span class="logo-name">SmartShip</span>
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-6 d-none d-lg-block">
@@ -293,7 +281,7 @@
           <a class="btn btn-danger" href="shipper_si_home.html">Home</a>
         </div>
     </div> -->
-    
+       <div class="container-lg">
         <h2>VesselCapacity</h2>
         <table>
             <tr>
@@ -341,7 +329,7 @@
             <tbody id="equipmentavailability"></tbody>
         </table>
         <div class="buttons-container">
-            <button id="Unconfirmed">UnConfirmedBooking</button>
+            <button id="rejectButton"><a href="CarrierRejection.html">UnconfirmedBooking</a></button>
             <button id="rejectButton"><a href="CarrierRejection.html">Reject Booking</a></button>
             <button id="furthersteps"><a href="CarrierPlannedtransport.html">PlannedTransport</a></button>
         </div>
@@ -447,8 +435,12 @@ const equipmentavailability = document.getElementById('equipmentavailability');
 			<div class="row align-items-center">
 				<!-- start logo -->
 				<div class="col-lg-3 col-md-12 md-text-center md-margin-50px-bottom sm-margin-30px-bottom">
-					<a href="index.html"><img class="footer-logo" src="img/logo.png" data-rjs="images/logo-white@2x.png" alt="Seamless blockchain and distributed ledger solutions"></a>
-				</div> 
+                    <div class="footer-logo">
+                        <a href="index.html"><img src="img/logo.png" data-rjs="images/logo-white@2x.png"
+                                alt="Seamless blockchain and distributed ledger solutions"></a>
+                        <span class="footer-logo-name">SmartShip</span>
+                    </div>
+                </div>
 				<!-- end logo -->
 				<!-- start copyright -->
 				<div class="col-lg-4 col-md-5 col-12 sm-margin-30px-bottom text-medium sm-text-center" style="color: #6f6f6f;">
