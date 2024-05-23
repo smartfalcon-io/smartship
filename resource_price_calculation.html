@@ -41,47 +41,31 @@
     <style>
         .background1 {
             background-color: #E6E6FA;
-            /* Light gray background color for the first section */
             padding: 20px;
-            /* Add padding for better readability */
             border-radius: 10px;
-            /* Add rounded corners */
             margin-bottom: 20px;
-            /* Add margin at the bottom */
             width: 100%;
-            /* Make sure the container spans the entire width */
 
         }
 
         .background2 {
-            /* background-color:  #FFFFE0; White background color for the second section */
             padding: 20px;
-            /* Add padding for better readability */
             border-radius: 10px;
-            /* Add rounded corners */
             margin-bottom: 20px;
-            /* Add margin at the bottom */
             width: 100%;
-            /* Make sure the container spans the entire width */
 
         }
 
         .content-wrapper {
             background-color: (255, 255, 255, 0.95);
-            /* Thicker background color */
             padding: 20px;
-            /* Add padding for better readability */
             border-radius: 10px;
-            /* Add rounded corners */
         }
 
         .content-wrapper {
             position: relative;
-            /* Ensure the shape is positioned relative to this element */
             z-index: 1;
-            /* Ensure content appears above the background shape */
             overflow: hidden;
-            /* Hide overflow to prevent shape from protruding */
         }
 
         .text-container {
@@ -96,18 +80,14 @@
             width: 0;
             height: 0;
             border-left: 100px solid transparent;
-            /* Adjust size as needed */
             border-right: 100px solid transparent;
-            /* Adjust size as needed */
             border-bottom: 200px solid #E6E6FA;
-            /* Light gray background color */
         }
 
         .calculate-heading {
             font-size: 3.8em;
             line-height: 1.2;
             text-align: left;
-            /* Align the text to the left */
             color: #009ee3;
             margin-left: 50px;
         }
@@ -121,50 +101,37 @@
 
         .paragraph-container {
             text-align: left;
-            /* Center-align the text content */
             margin: 0 auto;
-            /* Horizontally center the container */
             width: 70%;
-            /* Set a width for the container, adjust as needed */
             margin-right: 140px;
         }
 
         .paragraph-container2 {
             text-align: left;
-            /* Center-align the text content */
             margin: 0 auto;
-            /* Horizontally center the container */
             width: 70%;
-            /* Set a width for the container, adjust as needed */
             margin-left: 5px;
             font-weight: bold;
             line-height: 5.2px;
-            /* Adjust the line height as needed */
 
         }
 
         .float-right-adjusted {
             margin-top: 10px;
-            /* Adjust top margin */
             margin-left: 200px;
-            /* Adjust right margin */
         }
 
         .button {
             margin-top: 20px;
-            /* Adjust top margin */
             margin-right: 80px;
-            /* Adjust right margin */
             width: 170px;
             height: 60px;
             background-color: #009ee3;
             transition: background-color 0.3s;
-            /* Smooth transition for color change */
         }
 
         .button:active {
             background-color: #00ff00;
-            /* Change background color when clicked */
         }
 
         label {
@@ -197,24 +164,17 @@
         .additional-info {
             display: flex;
             justify-content: space-between;
-            /* Adjust as needed */
         }
 
         .distance-info {
             color: #009ee3;
-            /* Your desired color */
             font-size: 20px;
-            /* Your desired font size */
-            /* Add any other styling you want for both distance and weight */
         }
 
         .info-icon {
             width: 150px;
-            /* Set the width of the image */
             height: auto;
-            /* Automatically adjust the height to maintain aspect ratio */
             margin-right: 10px;
-            /* Adjust the spacing between the icon and text */
         }
 
         .custom_search_pop .modal-dialog {
@@ -240,6 +200,339 @@
             margin-bottom: 5px;
             /* position: absolute; */
             position: top;
+        }
+
+        /* Media Queries for additional sections */
+        @media (max-width: 1024px) {
+
+            .background1,
+            .background2,
+            .content-wrapper,
+            .text-container,
+            .content-background-shape,
+            .calculate-heading,
+            .paragraph-container,
+            .paragraph-container2,
+            .float-right-adjusted,
+            .button,
+            .calculate-h2,
+            .button-container,
+            .additional-info,
+            .distance-info,
+            .info-icon,
+            .custom_search_pop .modal-dialog,
+            .custom-modal-body,
+            .custom-modal-image img {
+                padding: 15px;
+                margin: 10px;
+            }
+
+            .calculate-heading {
+                font-size: 3em;
+                margin-left: 20px;
+            }
+
+            .calculate-h2 {
+                font-size: 2.5em;
+            }
+
+            .button {
+                width: 150px;
+                height: 50px;
+                margin-right: 50px;
+            }
+            .img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+        }
+
+        @media (max-width: 768px) {
+
+            .background1,
+            .background2,
+            .content-wrapper,
+            .text-container,
+            .content-background-shape,
+            .calculate-heading,
+            .paragraph-container,
+            .paragraph-container2,
+            .float-right-adjusted,
+            .button,
+            .calculate-h2,
+            .button-container,
+            .additional-info,
+            .distance-info,
+            .info-icon,
+            .custom_search_pop .modal-dialog,
+            .custom-modal-body,
+            .custom-modal-image img {
+                padding: 10px;
+                margin: 5px;
+            }
+
+            .text-container {
+                margin-left: 0;
+                text-align: center;
+            }
+
+            .paragraph-container {
+                width: 90%;
+                margin: 0 auto;
+                margin-right: 0;
+            }
+
+            .paragraph-container2 {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .calculate-heading {
+                font-size: 2em;
+                margin-left: 0;
+                text-align: center;
+            }
+
+            .calculate-h2 {
+                font-size: 2em;
+                text-align: center;
+            }
+
+            .button {
+                width: 130px;
+                height: 45px;
+                margin-right: 0;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .background1,
+            .background2,
+            .content-wrapper,
+            .text-container,
+            .content-background-shape,
+            .calculate-heading,
+            .paragraph-container,
+            .paragraph-container2,
+            .float-right-adjusted,
+            .button,
+            .calculate-h2,
+            .button-container,
+            .additional-info,
+            .distance-info,
+            .info-icon,
+            .custom_search_pop .modal-dialog,
+            .custom-modal-body,
+            .custom-modal-image img {
+                padding: 5px;
+                margin: 5px;
+            }
+
+            .text-container {
+                margin-left: 0;
+                text-align: center;
+            }
+
+            .paragraph-container {
+                width: 100%;
+                margin: 0 auto;
+                margin-right: 0;
+            }
+
+            .paragraph-container2 {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .calculate-heading {
+                font-size: 1.5em;
+                margin-left: 0;
+                text-align: center;
+            }
+
+            .calculate-h2 {
+                font-size: 1.5em;
+                text-align: center;
+                max-width: 80%;
+            }
+
+            .button {
+                width: 120px;
+                height: 40px;
+                margin-right: 0;
+                margin: 0 auto;
+                /* Media Queries for additional sections */
+            }
+
+            @media (max-width: 1024px) {
+
+                .background1,
+                .background2,
+                .content-wrapper,
+                .text-container,
+                .content-background-shape,
+                .calculate-heading,
+                .paragraph-container,
+                .paragraph-container2,
+                .float-right-adjusted,
+                .button,
+                .calculate-h2,
+                .button-container,
+                .additional-info,
+                .distance-info,
+                .info-icon,
+                .custom_search_pop .modal-dialog,
+                .custom-modal-body,
+                .custom-modal-image img {
+                    padding: 15px;
+                    margin: 10px;
+                }
+
+
+                .calculate-heading {
+                    font-size: 3em;
+                    margin-left: 20px;
+                }
+
+                .calculate-h2 {
+                    font-size: 2.5em;
+                }
+
+                .button {
+                    width: 150px;
+                    height: 50px;
+                    margin-right: 50px;
+                }
+            }
+
+            @media (max-width: 768px) {
+
+                .background1,
+                .background2,
+                .content-wrapper,
+                .text-container,
+                .content-background-shape,
+                .calculate-heading,
+                .paragraph-container,
+                .paragraph-container2,
+                .float-right-adjusted,
+                .button,
+                .calculate-h2,
+                .button-container,
+                .additional-info,
+                .distance-info,
+                .info-icon,
+                .custom_search_pop .modal-dialog,
+                .custom-modal-body,
+                .custom-modal-image img {
+                    padding: 10px;
+                    margin: 5px;
+                }
+
+                .text-container {
+                    margin-left: 0;
+                    text-align: center;
+                }
+
+                .paragraph-container {
+                    width: 90%;
+                    margin: 0 auto;
+                    margin-right: 0;
+                }
+
+                .paragraph-container2 {
+                    width: 90%;
+                    margin: 0 auto;
+                }
+
+                .calculate-heading {
+                    font-size: 2em;
+                    margin-left: 0;
+                    text-align: center;
+                }
+
+                .calculate-h2 {
+                    font-size: 2em;
+                    text-align: center;
+                    max-width: 100%;
+                }
+
+                .button {
+                    width: 130px;
+                    height: 45px;
+                    margin-right: 0;
+                    margin: 0 auto;
+                }
+            }
+
+            @media (max-width: 480px) {
+
+                .background1,
+                .background2,
+                .content-wrapper,
+                .text-container,
+                .content-background-shape,
+                .calculate-heading,
+                .paragraph-container,
+                .paragraph-container2,
+                .float-right-adjusted,
+                .button,
+                .calculate-h2,
+                .button-container,
+                .additional-info,
+                .distance-info,
+                .info-icon,
+                .custom_search_pop .modal-dialog,
+                .custom-modal-body,
+                .custom-modal-image img {
+                    padding: 5px;
+                    margin: 5px;
+                }
+
+                .text-container {
+                    margin-left: 0;
+                    text-align: center;
+                }
+
+                .paragraph-container {
+                    width: 100%;
+                    margin: 0 auto;
+                    margin-right: 0;
+                }
+
+                .paragraph-container2 {
+                    width: 100%;
+                    margin: 0 auto;
+                }
+
+                .calculate-heading {
+                    font-size: 1.5em;
+                    margin-left: 0;
+                    text-align: center;
+                }
+
+                .calculate-h2 {
+                    font-size: 1.5em;
+                    text-align: center;
+                }
+
+                .button {
+                    width: 140px;
+                    height: 40px;
+                    margin-right: 0;
+                    margin: 0 auto;
+                }
+
+                .info-icon {
+                    width: 100px;
+                }
+            }
+        }
+
+        .info-icon {
+            width: 100px;
         }
     </style>
 </head>
@@ -282,9 +575,9 @@
         </div> -->
             <div id="sticky-header" class="main-header-area">
                 <div class="container-try">
-                    <div class="header_bottom_border">
+                    <div class="header_top">
                         <div class="row align-items-center ">
-                            <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                            <div class="col-6 col-md-3 col-lg-3">
                                 <div class="logo">
                                     <a href="index.html">
                                         <img src="img/logo.png" alt="">
@@ -383,9 +676,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class=" col-md-6">
                 <img src="img/11669048_20943665.svg" alt="Price Calculation Image"
-                    class="img-fluid float-right-adjusted" style="max-width: 50%; max-height: 70%;">
+                    class="img-fluid float-right-adjusted" style="max-width: 60%; max-height: 40%;">
             </div>
         </div>
     </div>
@@ -397,7 +690,7 @@
                 <div class="text-center shipping-calculator">
                     <div class="content-container">
                         <h2 class="calculate-h2" style="white-space: nowrap;">
-                            <span class="highlight1">Get instant shipping rates with our calculator</span>
+                            <span class="highlight1">Get instant shipping <br>rates with our calculator</span>
                         </h2>
                         <form action="#" method="POST">
                             <div class="form-row">
@@ -675,8 +968,8 @@
             <div class="container">
                 <div class="row align-items-center">
                     <!-- start logo -->
-                    
-	<div class="col-lg-3 col-md-12 md-text-center md-margin-50px-bottom sm-margin-30px-bottom">
+
+                    <div class="col-lg-3 col-md-12 md-text-center md-margin-50px-bottom sm-margin-30px-bottom">
                         <div class="footer-logo">
                             <a href="index.html"><img src="img/logo.png" data-rjs="images/logo-white@2x.png"
                                     alt="Seamless blockchain and distributed ledger solutions"></a>
