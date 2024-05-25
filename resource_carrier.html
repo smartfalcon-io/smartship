@@ -13,33 +13,32 @@
     </script>
 
     <meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Resourecs: Carrier</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- <link rel="manifest" href="site.webmanifest"> -->
-	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
-	<!-- Place favicon.ico in the root directory -->
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
 
-	<!-- CSS here -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/themify-icons.css">
-	<link rel="stylesheet" href="css/nice-select.css">
-	<link rel="stylesheet" href="css/flaticon.css">
-	<link rel="stylesheet" href="css/gijgo.css">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/slicknav.css">
-	<link rel="stylesheet" href="css/style.css">
-	<!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 
     <style>
         /* Styles for HTML content */
         body {
-            /* font-family: Arial, sans-serif; */
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             padding: 0;
@@ -47,46 +46,38 @@
             color: #6f6f6f;
         }
 
-        /* .blog-container {
-            max-width: 80%;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 8px;
-        } */
-
         .blog-container {
             background-image: url("img/spectrum-gradient.svg");
+            background-size: cover;
+            /* padding: 20px;
+            text-align: center; */
             height: 800px;
+
         }
 
         .sub-blog-container {
             display: flex;
-            height: 500px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .content {
             flex: 1;
             max-width: 700px;
-            height: 500px;
-            margin-top: 100px;
-            margin-left: 175px;
+            margin: 20px;
         }
 
         .main-image {
-            flex: 2;
-            max-width: 650px; 
-            /* max-height: 300px;  */
-            margin-top: 80px;
-            margin-left: 200px;
-            text-align: right;
+            flex: 1;
+            max-width: 650px;
+            margin: 20px;
         }
 
         .main-content {
-            margin-top: 50px;
-            margin-left: 150px;
+            margin: 50px auto;
             max-width: 80%;
         }
-
 
         h1,
         h2,
@@ -103,7 +94,6 @@
             line-height: 1.6;
         }
 
-        /* Additional styles for headings */
         h1 {
             font-size: 50px;
             text-align: left;
@@ -129,7 +119,6 @@
             font-size: 18px;
         }
 
-        /* Style for links */
         a {
             color: #6f6f6f;
             text-decoration: none;
@@ -139,96 +128,128 @@
             text-decoration: underline;
         }
 
-        .step-container {
-            max-width: 100%;
-            height: 800px;
-            margin: 0px auto 50px;
+        .step-container,
+        .step-container-alt {
             display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
             align-items: center;
-            margin-bottom: 100px; 
-            background-image: url("img/tortoise-shell\(2\).svg");
+            justify-content: space-between;
+            /* Align items at the extreme opposite ends */
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 100%;
+            /* Adjusted to cover the entire width */
+            background-size: cover;
+            /* Ensure background image covers the entire container */
+            background-repeat: no-repeat;
+            /* Prevent background image from repeating */
+            background-position: center;
+            /* Center the background image */
         }
 
-        .step-container-alt {
-            max-width: 100%;
-            margin: 20px auto;
-            display: flex;
-            align-items: center;
-            margin-bottom: 100px; 
+
+        .step-container {
+            background-image: url("img/tortoise-shell(2).svg");
         }
-        
 
         .image {
-            margin-right: 20px;
-            max-width: 800px; 
-            /* max-height: 500px;  */
-            margin-left: 100px;
+            flex: 1;
+            margin: 20px;
+            max-width: 800px;
+
         }
 
         .text {
             flex: 1;
-            /* margin-top: 300px; */
-            margin-left: 100px;
-            max-width: calc(100% - 420px); 
+            margin: 20px;
         }
 
-        .issu-image {
-            margin-right: 20px;
-            max-width: 600px; /* Set the maximum width */
-            max-height: 400px; /* Set the maximum height */
-            margin-left: 200px;
+        @media (max-width: 1024px) {
+
+            .content,
+            .main-image,
+            .text,
+            .image {
+                margin: 10px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            .image {
+                max-width: 500px;
+            }
         }
 
-        .si-image {
-            margin-right: 20px;
-            max-width: 600px; /* Set the maximum width */
-            max-height: 400px; /* Set the maximum height */
-            margin-left: 200px;
-            margin-top: 300px;
+        @media (max-width: 768px) {
+
+            .content,
+            .main-image,
+            .text,
+            .image {
+                margin: 10px;
+                max-width: 100%;
+                flex: 1 1 100%;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 18px;
+            }
         }
 
-        /* .main-image {
-            max-width: 600px; 
-            max-height: 300px; 
-            margin-left: 400px;
-            margin-bottom: 150px
-        } */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
 
-        .si-text {
-            flex: 1;
-            margin-top: 300px;
-            margin-left: 200px;
-            max-width: calc(100% - 320px); 
+            h2 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+            .blog-container {
+            background-image: url("img/spectrum-gradient.svg");
+            background-size: cover;
+            /* padding: 20px;
+            text-align: center; */
+            height: 1200px;
+
         }
 
-        .rsi-text {
-            flex: 1;
-            margin-top: 125px;
-            margin-left: 300px;
-            max-width: calc(100% - 320px); 
-        }
+            .step-container,
+            .step-container-alt {
+                flex-direction: column;
+            }
 
-        .issu-text {
-            flex: 1;
-            margin-top: 50px;
-            margin-left: 300px;
-            max-width: calc(100% - 320px); 
-        }
+            .image,
+            .text {
+                margin: 20px auto;
+            }
 
-        .amend-text {
-            flex: 1;
-            margin-top: 120px;
-            margin-left: 300px;
-            max-width: calc(100% - 320px); 
+            .image {
+                max-width: 100%;
+            }
         }
-
-        .iss-text {
-            flex: 1;
-            margin-top: 50px;
-            margin-left: 200px;
-            max-width: calc(100% - 320px); 
-        }
-
     </style>
 </head>
 
@@ -239,9 +260,9 @@
         <div class="header-area ">
             <div id="sticky-header" class="main-header-area">
                 <div class="container-try">
-                    <div class="header_bottom_border">
+                    <div class="header_top">
                         <div class="row align-items-center ">
-                            <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                            <div class="col-6 col-md-3 col-lg-3">
                                 <div class="logo">
                                     <a href="index.html">
                                         <img src="img/logo.png" alt="">
@@ -299,8 +320,8 @@
                             </div>
                         </div>
                     </div>
-                </div>                
-                
+                </div>
+
             </div>
         </div>
     </header>
@@ -314,17 +335,24 @@
                 <!-- <h1><strong>A Comprehensive Guide to Carrier Responsibilities in Container Shipping</strong></h1> -->
             </div>
             <div class="main-image">
-                <img class="card-img rounded-0" src="img/65a10b3340e0df7f82fc1fbe_Depositphotos_399235404_L.png" alt="Blog Post Image">
+                <img class="card-img rounded-0" src="img/65a10b3340e0df7f82fc1fbe_Depositphotos_399235404_L.png"
+                    alt="Blog Post Image">
             </div>
         </div>
 
         <div class="main-content">
-            <p>In container shipping, a carrier refers to a company or entity responsible for transporting goods via containers from one location to another. Carriers play a pivotal role in the global supply chain by facilitating the movement of goods between ports and across various transportation modes, such as ships, trucks, and trains.</p>
+            <p>In container shipping, a carrier refers to a company or entity responsible for transporting goods via
+                containers from one location to another. Carriers play a pivotal role in the global supply chain by
+                facilitating the movement of goods between ports and across various transportation modes, such as ships,
+                trucks, and trains.</p>
 
-            <p>With the implementation of DCSA (Digital Container Shipping Association) standards, carriers are adopting a more streamlined and efficient approach to container shipping operations. These standards, developed collaboratively by major industry players, focus on digitizing and standardizing processes related to container tracking, documentation, and operational workflows.</p>
+            <p>With the implementation of DCSA (Digital Container Shipping Association) standards, carriers are adopting
+                a more streamlined and efficient approach to container shipping operations. These standards, developed
+                collaboratively by major industry players, focus on digitizing and standardizing processes related to
+                container tracking, documentation, and operational workflows.</p>
         </div>
 
-    </div>    
+    </div>
 
     <div class="try">
         <!-- <h2><strong>Carrier Operations</strong></h2>
@@ -333,7 +361,7 @@
 
         <div class="step-container">
             <div class="image">
-              <img class="card-img rounded-0" src="img/carrier_resources/carrier_login.png" alt="Login page Image">
+                <img class="card-img rounded-0" src="img/carrier_resources/carrier_login.png" alt="Login page Image">
             </div>
             <div class="text">
                 <h3>Login To The Carrier Account</h3>
@@ -344,44 +372,64 @@
         <div class="step-container-alt">
             <div class="text">
                 <h3>View the Booking details </h3>
-                <p>After the shipper submits the booking details, the carrier's team meticulously examines each aspect of the booking. This includes verifying the shipment's specifications, such as the type and quantity of goods, pickup and delivery locations, requested equipment, and any special instructions. Additionally, the carrier checks for compliance with regulatory requirements and internal policies. Once satisfied with the validation process, the carrier proceeds to confirm the booking and make necessary arrangements for transportation. </p>
+                <p>After the shipper submits the booking details, the carrier's team meticulously examines each aspect
+                    of the booking. This includes verifying the shipment's specifications, such as the type and quantity
+                    of goods, pickup and delivery locations, requested equipment, and any special instructions.
+                    Additionally, the carrier checks for compliance with regulatory requirements and internal policies.
+                    Once satisfied with the validation process, the carrier proceeds to confirm the booking and make
+                    necessary arrangements for transportation. </p>
             </div>
             <div class="image">
-                <img class="card-img rounded-0" src="img/CarrierImages/Bookingdata.png" alt="Shipping instructions Image">
+                <img class="card-img rounded-0" src="img/CarrierImages/Bookingdata.png"
+                    alt="Shipping instructions Image">
             </div>
         </div>
 
         <div class="step-container">
             <div class="image">
-              <img class="card-img rounded-0" src="img/CarrierImages/Check.png" alt="Login page Image">
+                <img class="card-img rounded-0" src="img/CarrierImages/Check.png" alt="Login page Image">
             </div>
             <div class="text">
                 <h3>Perform the Customer Credit Check</h3>
-                <p>After the shipper successfully submits the details, the carrier conducts a thorough credit check to assess the customer's creditworthiness. If the check clears, indicating satisfactory credit standing, the carrier responds with a confirmation of 'Credit Check Cleared.' However, if the check fails to meet the required criteria, the booking is unfortunately rejected.</p>
+                <p>After the shipper successfully submits the details, the carrier conducts a thorough credit check to
+                    assess the customer's creditworthiness. If the check clears, indicating satisfactory credit
+                    standing, the carrier responds with a confirmation of 'Credit Check Cleared.' However, if the check
+                    fails to meet the required criteria, the booking is unfortunately rejected.</p>
             </div>
         </div>
 
         <div class="step-container-alt">
             <div class="text">
                 <h3>Calculate and Apply charges for shipment </h3>
-                <p>After thoroughly reviewing the details of the shipment, including factors such as weight, volume, distance, and any special handling requirements, the carrier meticulously calculates various charges. These charges may include freight charges, handling fees, surcharges for specific services, and any applicable taxes or customs duties. Once the calculations are complete, the carrier promptly communicates the total charges to the shipper, providing a breakdown of each cost component for transparency and clarity. </p>
+                <p>After thoroughly reviewing the details of the shipment, including factors such as weight, volume,
+                    distance, and any special handling requirements, the carrier meticulously calculates various
+                    charges. These charges may include freight charges, handling fees, surcharges for specific services,
+                    and any applicable taxes or customs duties. Once the calculations are complete, the carrier promptly
+                    communicates the total charges to the shipper, providing a breakdown of each cost component for
+                    transparency and clarity. </p>
             </div>
             <div class="image">
-                <img class="card-img rounded-0" src="img/CarrierImages/ChargesCalculation.png" alt="Shipping instructions Image">
+                <img class="card-img rounded-0" src="img/CarrierImages/ChargesCalculation.png"
+                    alt="Shipping instructions Image">
             </div>
         </div>
 
         <div class="step-container">
             <div class="image">
-              <img class="card-img rounded-0" src="img/CarrierImages/Validations1.png" alt="Login page Image">
+                <img class="card-img rounded-0" src="img/CarrierImages/Validations1.png" alt="Login page Image">
             </div>
             <div class="text">
                 <h3>Conducting Diverse Validations for Shipment Processing</h3>
-                <p>During the process of confirming a booking, the carrier conducts various validations to ensure the smooth execution of the shipment. This includes verifying the availability of space on the vessel to accommodate the requested cargo and ensuring that the necessary equipment for loading the shipment is readily available. By performing these validations, the carrier aims to prevent any potential delays or issues during the transportation process, thus ensuring a seamless experience for both the shipper and the carrier.</p>
+                <p>During the process of confirming a booking, the carrier conducts various validations to ensure the
+                    smooth execution of the shipment. This includes verifying the availability of space on the vessel to
+                    accommodate the requested cargo and ensuring that the necessary equipment for loading the shipment
+                    is readily available. By performing these validations, the carrier aims to prevent any potential
+                    delays or issues during the transportation process, thus ensuring a seamless experience for both the
+                    shipper and the carrier.</p>
             </div>
         </div>
 
-       
+
         <!-- <div class="step-container-alt">
             <div class="text">
                 <h3>Conducting Diverse Validations for Shipment Processing</h3>
@@ -403,10 +451,14 @@
         <div class="step-container-alt">
             <div class="text">
                 <h3>Register planned transport</h3>
-                <p>After successfully clearing all validations, the carrier proceeds to create a transport plan. This plan meticulously outlines the load and discharge locations, as well as the various stages of transportation. By detailing these key aspects, the carrier ensures efficient and organized handling of the shipment from pickup to delivery.. </p>
+                <p>After successfully clearing all validations, the carrier proceeds to create a transport plan. This
+                    plan meticulously outlines the load and discharge locations, as well as the various stages of
+                    transportation. By detailing these key aspects, the carrier ensures efficient and organized handling
+                    of the shipment from pickup to delivery.. </p>
             </div>
             <div class="image">
-                <img class="card-img rounded-0" src="img/CarrierImages/PlannedTransport.png" alt="Shipping instructions Image">
+                <img class="card-img rounded-0" src="img/CarrierImages/PlannedTransport.png"
+                    alt="Shipping instructions Image">
             </div>
         </div>
 
@@ -421,11 +473,16 @@
         </div> -->
         <div class="step-container">
             <div class="image">
-              <img class="card-img rounded-0" src="img/CarrierImages/ShipmentData.png" alt="Login page Image">
+                <img class="card-img rounded-0" src="img/CarrierImages/ShipmentData.png" alt="Login page Image">
             </div>
             <div class="text">
                 <h3>Confirming booking and encorporating all the details in a shipment</h3>
-                <p>After completing all necessary checks, validations, and transport planning, the carrier consolidates comprehensive details into the shipment record. This includes information such as booking specifics, cargo specifications, container numbers, vessel schedules, departure and arrival times, and any special handling instructions. By meticulously incorporating all relevant information, the carrier ensures accurate tracking and efficient management of the shipment from pickup to delivery, facilitating a smooth and transparent transportation process.</p>
+                <p>After completing all necessary checks, validations, and transport planning, the carrier consolidates
+                    comprehensive details into the shipment record. This includes information such as booking specifics,
+                    cargo specifications, container numbers, vessel schedules, departure and arrival times, and any
+                    special handling instructions. By meticulously incorporating all relevant information, the carrier
+                    ensures accurate tracking and efficient management of the shipment from pickup to delivery,
+                    facilitating a smooth and transparent transportation process.</p>
             </div>
         </div>
 
@@ -443,7 +500,11 @@
         <div class="step-container-alt">
             <div class="text">
                 <h3>Approving or Rejecting amends to booking</h3>
-                <p>After confirming the booking, if the shipper intends to make any amendments, they submit the changes to the carrier. Upon receiving the amendments, the carrier thoroughly evaluates them to determine feasibility. If the changes are acceptable, the carrier approves the amendments by pressing the 'Approve' button. However, if the carrier decides not to approve the amendments, they reject the changes, potentially resulting in the cancellation of the booking. </p>
+                <p>After confirming the booking, if the shipper intends to make any amendments, they submit the changes
+                    to the carrier. Upon receiving the amendments, the carrier thoroughly evaluates them to determine
+                    feasibility. If the changes are acceptable, the carrier approves the amendments by pressing the
+                    'Approve' button. However, if the carrier decides not to approve the amendments, they reject the
+                    changes, potentially resulting in the cancellation of the booking. </p>
             </div>
             <div class="image">
                 <img class="card-img rounded-0" src="img/CarrierImages/Amends2.png" alt="Shipping instructions Image">
@@ -452,20 +513,27 @@
 
         <div class="step-container">
             <div class="image">
-              <img class="card-img rounded-0" src="img/carrier_resources/carrier_si.png" alt="Login page Image">
+                <img class="card-img rounded-0" src="img/carrier_resources/carrier_si.png" alt="Login page Image">
             </div>
             <div class="text">
                 <h3>Prepare the draft Bill of Lading</h3>
-                <p>The carrier checks the shipping instructions posted by shipper and, if they are valid, he proceed to create a draft transport document by clicking a "create document" button. However, if the details are not valid, he request valid shipping instructions by clicking an "update" button. This ensures that accurate information is used in the transport document.</p>
+                <p>The carrier checks the shipping instructions posted by shipper and, if they are valid, he proceed to
+                    create a draft transport document by clicking a "create document" button. However, if the details
+                    are not valid, he request valid shipping instructions by clicking an "update" button. This ensures
+                    that accurate information is used in the transport document.</p>
             </div>
         </div>
         <div class="step-container-alt">
             <div class="text">
                 <h3>Initiating the issuance of the transport document</h3>
-                <p>After the draft transport document approved by the shipper, the carrier then initiates the issuance of the transport document by submitting a formal request. This request signals that the document is ready to be officially issued and used for the shipment. This ensures that the document is only finalized and issued once all necessary approvals are obtained. </p>
+                <p>After the draft transport document approved by the shipper, the carrier then initiates the issuance
+                    of the transport document by submitting a formal request. This request signals that the document is
+                    ready to be officially issued and used for the shipment. This ensures that the document is only
+                    finalized and issued once all necessary approvals are obtained. </p>
             </div>
             <div class="image">
-                <img class="card-img rounded-0" src="img/carrier_resources/issu_req.png" alt="Shipping instructions Image">
+                <img class="card-img rounded-0" src="img/carrier_resources/issu_req.png"
+                    alt="Shipping instructions Image">
             </div>
         </div>
 
@@ -475,21 +543,31 @@
                 <p>The carrier reviews the issuance response provided by the shipper concerning the transport document. If the response indicates an approval for issuance, typically signaled by an "issue" code, the carrier proceeds to finalize and issue the document by clicking on "issue". Conversely, if the response suggests non-issuance, denoted by a "cancel" code or any non-issuance indicator, the carrier aborts the issuance process by clicking on "cancel". </p>
             </div> -->
             <div class="image">
-                <img class="card-img rounded-0" src="img/carrier_resources/issu_resp.png" alt="Shipping instructions Image">
-              </div>
-              <div class="text">
+                <img class="card-img rounded-0" src="img/carrier_resources/issu_resp.png"
+                    alt="Shipping instructions Image">
+            </div>
+            <div class="text">
                 <h3>Issuing the transport document(Bill-of-Lading)</h3>
-                <p>The carrier reviews the issuance response provided by the shipper concerning the transport document. If the response indicates an approval for issuance, typically signaled by an "issue" code, the carrier proceeds to finalize and issue the document by clicking on "issue". Conversely, if the response suggests non-issuance, denoted by a "cancel" code or any non-issuance indicator, the carrier aborts the issuance process by clicking on "cancel". </p>
+                <p>The carrier reviews the issuance response provided by the shipper concerning the transport document.
+                    If the response indicates an approval for issuance, typically signaled by an "issue" code, the
+                    carrier proceeds to finalize and issue the document by clicking on "issue". Conversely, if the
+                    response suggests non-issuance, denoted by a "cancel" code or any non-issuance indicator, the
+                    carrier aborts the issuance process by clicking on "cancel". </p>
             </div>
         </div>
 
         <div class="step-container-alt">
             <div class="text">
                 <h3>Manage Bill-of-Lading amendments</h3>
-                <p>Upon receiving an amendments request from the shipper, the carrier reviews the requested changes. If the requested amendments are feasible and within the carrier's authority to make, they proceed by clicking an "amend" button to implement the changes. However, if the requested amendments cannot be accommodated for any reason, the carrier communicates this to the shipper by clicking a designated "amends not possible" button, sending a message amendmends are not possible. </p>
+                <p>Upon receiving an amendments request from the shipper, the carrier reviews the requested changes. If
+                    the requested amendments are feasible and within the carrier's authority to make, they proceed by
+                    clicking an "amend" button to implement the changes. However, if the requested amendments cannot be
+                    accommodated for any reason, the carrier communicates this to the shipper by clicking a designated
+                    "amends not possible" button, sending a message amendmends are not possible. </p>
             </div>
             <div class="image">
-              <img class="card-img rounded-0" src="img/carrier_resources/amends_req.png" alt="Shipping instructions Image">
+                <img class="card-img rounded-0" src="img/carrier_resources/amends_req.png"
+                    alt="Shipping instructions Image">
             </div>
             <!-- <div class="text">
                 <h3>Manage Bill-of-Lading amendments</h3>
@@ -499,151 +577,173 @@
 
         <div class="step-container">
             <div class="image">
-                <img class="card-img rounded-0" src="img/carrier_resources/surr_req.png" alt="Shipping instructions Image">
+                <img class="card-img rounded-0" src="img/carrier_resources/surr_req.png"
+                    alt="Shipping instructions Image">
             </div>
             <div class="text">
                 <h3>Makes decisions in surrender of document</h3>
-                <p>Upon receiving a surrender request from the shipper, the carrier reviews the details of the request. After assessing the request, the carrier then sends a response to the shipper, acknowledging receipt of the surrender request and providing information whether to surrender the document or not. This communication ensures that the shipper is informed of the carrier's actions and any next steps in the surrender process.</p>
+                <p>Upon receiving a surrender request from the shipper, the carrier reviews the details of the request.
+                    After assessing the request, the carrier then sends a response to the shipper, acknowledging receipt
+                    of the surrender request and providing information whether to surrender the document or not. This
+                    communication ensures that the shipper is informed of the carrier's actions and any next steps in
+                    the surrender process.</p>
             </div>
         </div>
 
         <div class="step-container-alt">
             <div class="text">
                 <h3>Registers the Track&Trace subscrption</h3>
-                <p>when the carrier receives a track & trace subscription request from a subscriber, they review the provided details. If the information is accurate and valid, the carrier confirms the subscription by clicking a designated "confirm subscription" button. However, if any discrepancies or issues are found, the carrier cancels the subscription request by selecting a "cancel" button. </p>
+                <p>when the carrier receives a track & trace subscription request from a subscriber, they review the
+                    provided details. If the information is accurate and valid, the carrier confirms the subscription by
+                    clicking a designated "confirm subscription" button. However, if any discrepancies or issues are
+                    found, the carrier cancels the subscription request by selecting a "cancel" button. </p>
             </div>
             <div class="image">
-              <img class="card-img rounded-0" src="img/carrier_resources/t&t_registering.png" alt="Shipping instructions Image">
+                <img class="card-img rounded-0" src="img/carrier_resources/t&t_registering.png"
+                    alt="Shipping instructions Image">
             </div>
         </div>
 
         <div class="step-container">
             <div class="image">
-                <img class="card-img rounded-0" src="img/carrier_resources/t&t_registering.png" alt="Shipping instructions Image">
-              </div>
-              <div class="text">
+                <img class="card-img rounded-0" src="img/carrier_resources/t&t_registering.png"
+                    alt="Shipping instructions Image">
+            </div>
+            <div class="text">
                 <h3>Provides the Track&Trace updates</h3>
-                <p>The carrier provides track & trace updates to subscribers through a callback channel specified in the subscription request. When updates become available, the carrier sends them directly to the subscriber using the provided callback channel. This ensures that subscribers receive timely and relevant information about the status and location of their shipments, enhancing transparency and communication between the carrier and the subscriber.</p>
+                <p>The carrier provides track & trace updates to subscribers through a callback channel specified in the
+                    subscription request. When updates become available, the carrier sends them directly to the
+                    subscriber using the provided callback channel. This ensures that subscribers receive timely and
+                    relevant information about the status and location of their shipments, enhancing transparency and
+                    communication between the carrier and the subscriber.</p>
             </div>
         </div>
-           <!-- <div></div> -->
-        
-    <!-- footer start -->
-    <footer class="footer-modern-dark bg-extra-dark-gray padding-five-tb sm-padding-30px-tb">
-        <div class="footer-widget-area padding-40px-bottom sm-padding-30px-bottom">
-            <div class="container">
-                <div class="row align-items-center">
-                    <!-- start logo -->
-                    <div class="col-lg-3 col-md-12 md-text-center md-margin-50px-bottom sm-margin-30px-bottom">
-                        <div class="footer-logo">
-                            <a href="index.html"><img src="img/logo.png" data-rjs="images/logo-white@2x.png"
-                                    alt="Seamless blockchain and distributed ledger solutions"></a>
-                            <span class="footer-logo-name">SmartShip</span>
+        <!-- <div></div> -->
+
+        <!-- footer start -->
+        <footer class="footer-modern-dark bg-extra-dark-gray padding-five-tb sm-padding-30px-tb">
+            <div class="footer-widget-area padding-40px-bottom sm-padding-30px-bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <!-- start logo -->
+                        <div class="col-lg-3 col-md-12 md-text-center md-margin-50px-bottom sm-margin-30px-bottom">
+                            <div class="footer-logo">
+                                <a href="index.html"><img src="img/logo.png" data-rjs="images/logo-white@2x.png"
+                                        alt="Seamless blockchain and distributed ledger solutions"></a>
+                                <span class="footer-logo-name">SmartShip</span>
+                            </div>
                         </div>
-                    </div>
-                    <!-- end logo -->
-                    <!-- start copyright -->
-                    <div class="col-lg-4 col-md-5 col-12 sm-margin-30px-bottom text-medium sm-text-center" style="color: #6f6f6f;">
-                        Smartfalcon LLP,4th Floor,<br>
-                        THub Phase 2, Plot No 1/C, Sy No 83/1,<br>
-                        Raidurgam panmaktha,Hyderabad Knowledge City, Serilingampally,<br>
-                        Hyderabad, Telangana - 500 081.
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-12 sm-margin-30px-bottom text-medium sm-text-center" style="color: #6f6f6f;">
-                        +91 98662 27022<br>
-                        <a href="mailto:contact@smartfalcon.io" style="color: #6f6f6f;">contact@smartfalcon.io</a>
-                    </div>
-                    <!-- end copyright -->
-                    <!-- start social media -->
-                    <div class="col-lg-2 col-md-3 text-md-right sm-text-center">
-                        <div class="social-icon-style-8 d-inline-block vertical-align-middle">
-                            <ul class="small-icon mb-0">
-                                <!-- <li><a class="facebook text-white-2" href="https://www.facebook.com/people/SmartFalcon-LLP/100089072081008/" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                        <!-- end logo -->
+                        <!-- start copyright -->
+                        <div class="col-lg-4 col-md-5 col-12 sm-margin-30px-bottom text-medium sm-text-center"
+                            style="color: #6f6f6f;">
+                            Smartfalcon LLP,4th Floor,<br>
+                            THub Phase 2, Plot No 1/C, Sy No 83/1,<br>
+                            Raidurgam panmaktha,Hyderabad Knowledge City, Serilingampally,<br>
+                            Hyderabad, Telangana - 500 081.
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-12 sm-margin-30px-bottom text-medium sm-text-center"
+                            style="color: #6f6f6f;">
+                            +91 98662 27022<br>
+                            <a href="mailto:contact@smartfalcon.io" style="color: #6f6f6f;">contact@smartfalcon.io</a>
+                        </div>
+                        <!-- end copyright -->
+                        <!-- start social media -->
+                        <div class="col-lg-2 col-md-3 text-md-right sm-text-center">
+                            <div class="social-icon-style-8 d-inline-block vertical-align-middle">
+                                <ul class="small-icon mb-0">
+                                    <!-- <li><a class="facebook text-white-2" href="https://www.facebook.com/people/SmartFalcon-LLP/100089072081008/" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
                                 <li><a class="twitter text-white-2" href="https://twitter.com/SmartFalcon_DLT" target="_blank"><i class="fab fa-twitter"></i></a></li>
                                 <li><a class="google text-white-2" href="https://www.linkedin.com/company/smartfalcon-llp/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
                                 <li><a class="instagram text-white-2" href="https://instagram.com/" target="_blank"><i class="fab fa-instagram mr-0" aria-hidden="true"></i></a></li> -->
-                            </ul>
+                                </ul>
+                            </div>
                         </div>
+                        <!-- end social media -->
                     </div>
-                    <!-- end social media -->
+                </div>
+            </div>
+
+            <div class="col-md-12 mb-20">
+                <h4 class="mb-20"></h4>
+            </div>
+
+            <div class="container">
+                <!-- start copyright -->
+                <div
+                    class="footer-bottom border-top border-color-medium-dark-gray padding-40px-top sm-padding-30px-top">
+                    <div class="row align-items-center">
+                        <div class="col-md-12 mb-20">
+                            <h4 class="mb-20"></h4>
+                        </div>
+                        <div class="col-md-6 text-md-left text-center text-small" style="color: #6f6f6f;"><a
+                                href="privacy-policy.html" style="color: #6f6f6f;">Privacy Policy</a> | <a
+                                href="tc.html" style="color: #6f6f6f;">Terms and Conditions</a></div>
+                        <div class="col-md-6 text-md-right text-center text-small" style="color: #6f6f6f;">&copy; 2024
+                            <a href="https://www.smartfalcon.io/" style="color: #6f6f6f;">SmartFalcon</a>. All rights
+                            reserved</div>
+                    </div>
+                </div>
+                <!-- end copyright -->
+            </div>
+        </footer>
+        <!--/ footer end  -->
+
+        <!-- Modal -->
+        <div class="modal fade custom_search_pop" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="serch_form">
+                        <input type="text" placeholder="search">
+                        <button type="submit">search</button>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- JS here -->
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/isotope.pkgd.min.js"></script>
+        <script src="js/ajax-form.js"></script>
+        <script src="js/waypoints.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>
+        <script src="js/imagesloaded.pkgd.min.js"></script>
+        <script src="js/scrollIt.js"></script>
+        <script src="js/jquery.scrollUp.min.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/nice-select.min.js"></script>
+        <script src="js/jquery.slicknav.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/gijgo.min.js"></script>
 
-        <div class="col-md-12 mb-20">
-            <h4 class="mb-20"></h4>
-        </div>
-        
-        <div class="container">
-            <!-- start copyright -->
-            <div class="footer-bottom border-top border-color-medium-dark-gray padding-40px-top sm-padding-30px-top">
-                <div class="row align-items-center">
-                    <div class="col-md-12 mb-20">
-                        <h4 class="mb-20"></h4>
-                    </div>
-                    <div class="col-md-6 text-md-left text-center text-small" style="color: #6f6f6f;"><a href="privacy-policy.html" style="color: #6f6f6f;">Privacy Policy</a> | <a href="tc.html" style="color: #6f6f6f;">Terms and Conditions</a></div>
-                    <div class="col-md-6 text-md-right text-center text-small" style="color: #6f6f6f;">&copy; 2024 <a href="https://www.smartfalcon.io/" style="color: #6f6f6f;">SmartFalcon</a>. All rights reserved</div>
-                </div>
-            </div>
-            <!-- end copyright -->
-        </div>
-    </footer>
-    <!--/ footer end  -->
+        <!--contact js-->
+        <script src="js/contact.js"></script>
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="js/jquery.form.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/mail-script.js"></script>
 
-<!-- Modal -->
-<div class="modal fade custom_search_pop" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered" role="document">
-  <div class="modal-content">
-    <div class="serch_form">
-        <input type="text" placeholder="search" >
-        <button type="submit">search</button>
-    </div>
-  </div>
-</div>
-</div>
-<!-- JS here -->
-<script src="js/vendor/modernizr-3.5.0.min.js"></script>
-<script src="js/vendor/jquery-1.12.4.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/isotope.pkgd.min.js"></script>
-<script src="js/ajax-form.js"></script>
-<script src="js/waypoints.min.js"></script>
-<script src="js/jquery.counterup.min.js"></script>
-<script src="js/imagesloaded.pkgd.min.js"></script>
-<script src="js/scrollIt.js"></script>
-<script src="js/jquery.scrollUp.min.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/nice-select.min.js"></script>
-<script src="js/jquery.slicknav.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/gijgo.min.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+            $('#datepicker').datepicker({
+                iconsLibrary: 'fontawesome',
+                icons: {
+                    rightIcon: '<span class="fa fa-caret-down"></span>'
+                }
+            });
+            $('#datepicker2').datepicker({
+                iconsLibrary: 'fontawesome',
+                icons: {
+                    rightIcon: '<span class="fa fa-caret-down"></span>'
+                }
 
-<!--contact js-->
-<script src="js/contact.js"></script>
-<script src="js/jquery.ajaxchimp.min.js"></script>
-<script src="js/jquery.form.js"></script>
-<script src="js/jquery.validate.min.js"></script>
-<script src="js/mail-script.js"></script>
-
-<script src="js/main.js"></script>
-<script>
-    $('#datepicker').datepicker({
-        iconsLibrary: 'fontawesome',
-        icons: {
-         rightIcon: '<span class="fa fa-caret-down"></span>'
-     }
-    });
-    $('#datepicker2').datepicker({
-        iconsLibrary: 'fontawesome',
-        icons: {
-         rightIcon: '<span class="fa fa-caret-down"></span>'
-     }
-
-    });
-</script>
+            });
+        </script>
 
 </body>
 

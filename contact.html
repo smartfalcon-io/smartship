@@ -36,6 +36,54 @@
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+
+    <style>
+        .media.contact-info {
+            display: flex;
+            align-items: flex-start;
+            /* Align items to the start (top) */
+            font-weight: bold;
+            flex-wrap: wrap;
+            /* Allow flex items to wrap */
+        }
+
+        .contact-info__icon {
+            margin-top: 5px;
+            /* Adjust as needed */
+            margin-right: 10px;
+            /* Adjust as needed */
+        }
+
+        .media-body {
+            flex: 1;
+            /* Allow the text to wrap */
+        }
+
+        @media (max-width: 768px) {
+            .media.contact-info {
+                flex-direction: column;
+                /* Stack elements vertically on smaller screens */
+                align-items: flex-start;
+                /* Align items to the start (top) */
+            }
+
+            .contact-info__icon {
+                margin-top: 0;
+                /* Reset margin */
+                margin-right: 0;
+                /* Reset margin */
+                margin-bottom: 10px;
+                /* Add margin at the bottom for spacing */
+            }
+
+            .media-body {
+                white-space: normal;
+                /* Allow text to wrap */
+            }
+        }
+    </style>
+
+
 </head>
 
 <body>
@@ -48,12 +96,12 @@
         <div class="header-area ">
             <div id="sticky-header" class="main-header-area">
                 <div class="container-try">
-                    <div class="header_bottom_border">
+                    <div class="header_top">
                         <div class="row align-items-center ">
-                            <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                            <div class="col-6 col-md-3 col-lg-3">
                                 <div class="logo">
                                     <a href="index.html">
-                                        <img src="img/logo.png" alt="">
+                                        <img src="img/logo.png" alt="" class="logo-img">
                                     </a>
                                     <span class="logo-name">SmartShip</span>
                                 </div>
@@ -108,95 +156,96 @@
                             </div>
                         </div>
                     </div>
-                </div>                
-                
+                </div>
+
             </div>
         </div>
     </header>
     <!-- header-end -->
 
-             <!-- bradcam_area  -->
-             <div class="bradcam_area bradcam_bg_1">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="bradcam_text text-center">
-                                    <h3>Contact Us</h3>
-                                </div>
-                            </div>
-                        </div>
+    <!-- bradcam_area  -->
+    <div class="bradcam_area bradcam_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>Contact Us</h3>
                     </div>
                 </div>
-                <!--/ bradcam_area  -->
+            </div>
+        </div>
+    </div>
+    <!--/ bradcam_area  -->
 
     <!-- ================ contact section start ================= -->
     <section class="contact-section">
-            <div class="container">
-                <div class="d-none d-sm-block mb-5 pb-4">
-                   
-                  
-                    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&amp;callback=initMap"> -->
-                    </script>
-    
-                </div>
-    
-    
-                <section class="section-padding" style="margin-top: 0; padding-top:0px;">
-                    <div class="container">
-                        <div class="row" style="margin-right: 70px;">
-                            <div class="col-lg-6">
-                                <h2 class="contact-title">Get in Touch</h2>
-                                <div>
-                                    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-                                    <script>
-                                      hbspt.forms.create({
+        <div class="container">
+            <div class="d-none d-sm-block mb-5 pb-4">
+
+
+                <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&amp;callback=initMap"> -->
+                </script>
+
+            </div>
+
+
+            <section class="section-padding" style="margin-top: 0; padding-top:0px;">
+                <div class="container">
+                    <div class="row" style="margin-right: 70px;">
+                        <div class="col-lg-6">
+                            <h2 class="contact-title">Get in Touch</h2>
+                            <div>
+                                <script charset="utf-8" type="text/javascript"
+                                    src="//js.hsforms.net/forms/embed/v2.js"></script>
+                                <script>
+                                    hbspt.forms.create({
                                         region: "na1",
                                         portalId: "44235887",
                                         formId: "7d5c8b39-398c-4989-bc2b-b3f8d82f4fa3"
-                                      });
-                                    </script>          
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="col-lg-8 offset-lg-2">
-                                    <h2 style="margin-bottom: 70px;">Reach Out to Us</h2>
-                                    
-                                    <!-- <p>For more information about Smartfalcon, get in touch with us and we assure<br>you that all your queries will be taken care of.</p> -->
-
-                                    <div class="media contact-info" style="font-weight: bold;">
-                                        <span class="contact-info__icon"><i class="ti-home"></i></span>
-                                        <div class="media-body" style="white-space: nowrap;">
-                                            <h3><strong>SmartFalcon LLP</strong></h3>
-                                            <p style="font-weight:bold;">T-hub Phase 2, Plot No 1/C, Sy No 83/1,<br>
-                                                Raidurgam panmaktha, Hyderabad Knowledge City, Serilingampally,<br>
-                                                Hyderabad, Telangana - 500 081.</p>
-                                        </div>
-                                    </div>
-                                    <div class="media contact-info">
-                                        <span class="contact-info__icon"><i class="ti-tablet"></i></span>
-                                        <div class="media-body">
-                                            <h3><strong>+91 9866227022</strong></h3>
-                                            <p style="font-weight: bold;">Mon to Fri 9am to 6pm</p>
-                                        </div>
-                                    </div>
-                                    <div class="media contact-info">
-                                        <span class="contact-info__icon"><i class="ti-email"></i></span>
-                                        <div class="media-body">
-                                            <h3><strong>contact@smartfalcon.io</strong></h3>
-                                            <p style="font-weight: bold;">Send us your query anytime!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                
+                                    });
+                                </script>
                             </div>
                         </div>
+                        <div class="col-lg-6">
+                            <div class="col-lg-8 offset-lg-2">
+                                <h2 style="margin-bottom: 70px;">Reach Out to Us</h2>
+
+                                <!-- <p>For more information about Smartfalcon, get in touch with us and we assure<br>you that all your queries will be taken care of.</p> -->
+
+                                <div class="media contact-info" style="font-weight: bold;">
+                                    <span class="contact-info__icon"><i class="ti-home"></i></span>
+                                    <div class="media-body" style="white-space: nowrap;;">
+                                        <h3><strong>SmartFalcon LLP</strong></h3>
+                                        <p style="font-weight:bold;">T-hub Phase 2, Plot No 1/C, Sy No 83/1,<br>
+                                            Raidurgam panmaktha, Hyderabad Knowledge City, Serilingampally,<br>
+                                            Hyderabad, Telangana - 500 081.</p>
+                                    </div>
+                                </div>
+                                <div class="media contact-info">
+                                    <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                                    <div class="media-body">
+                                        <h3><strong>+91 9866227022</strong></h3>
+                                        <p style="font-weight: bold;">Mon to Fri 9am to 6pm</p>
+                                    </div>
+                                </div>
+                                <div class="media contact-info">
+                                    <span class="contact-info__icon"><i class="ti-email"></i></span>
+                                    <div class="media-body">
+                                        <h3><strong>contact@smartfalcon.io</strong></h3>
+                                        <p style="font-weight: bold;">Send us your query anytime!</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
-                </section>
-                
-            </div>
-        </section>
+                </div>
+            </section>
+
+        </div>
+    </section>
     <!-- ================ contact section end ================= -->
-    
+
     <!-- footer start -->
     <footer class="footer-modern-dark bg-extra-dark-gray padding-five-tb sm-padding-30px-tb">
         <div class="footer-widget-area padding-40px-bottom sm-padding-30px-bottom">
@@ -212,13 +261,15 @@
                     </div>
                     <!-- end logo -->
                     <!-- start copyright -->
-                    <div class="col-lg-4 col-md-5 col-12 sm-margin-30px-bottom text-medium sm-text-center" style="color: #6f6f6f;">
+                    <div class="col-lg-4 col-md-5 col-12 sm-margin-30px-bottom text-medium sm-text-center"
+                        style="color: #6f6f6f;">
                         Smartfalcon LLP,4th Floor,<br>
                         THub Phase 2, Plot No 1/C, Sy No 83/1,<br>
                         Raidurgam panmaktha,Hyderabad Knowledge City, Serilingampally,<br>
                         Hyderabad, Telangana - 500 081.
                     </div>
-                    <div class="col-lg-3 col-md-4 col-12 sm-margin-30px-bottom text-medium sm-text-center" style="color: #6f6f6f;">
+                    <div class="col-lg-3 col-md-4 col-12 sm-margin-30px-bottom text-medium sm-text-center"
+                        style="color: #6f6f6f;">
                         +91 98662 27022<br>
                         <a href="mailto:contact@smartfalcon.io" style="color: #6f6f6f;">contact@smartfalcon.io</a>
                     </div>
@@ -242,7 +293,7 @@
         <div class="col-md-12 mb-20">
             <h4 class="mb-20"></h4>
         </div>
-        
+
         <div class="container">
             <!-- start copyright -->
             <div class="footer-bottom border-top border-color-medium-dark-gray padding-40px-top sm-padding-30px-top">
@@ -250,8 +301,12 @@
                     <div class="col-md-12 mb-20">
                         <h4 class="mb-20"></h4>
                     </div>
-                    <div class="col-md-6 text-md-left text-center text-small" style="color: #6f6f6f;"><a href="privacy-policy.html" style="color: #6f6f6f;">Privacy Policy</a> | <a href="tc.html" style="color: #6f6f6f;">Terms and Conditions</a></div>
-                    <div class="col-md-6 text-md-right text-center text-small" style="color: #6f6f6f;">&copy; 2024 <a href="https://www.smartfalcon.io/" style="color: #6f6f6f;">SmartFalcon</a>. All rights reserved</div>
+                    <div class="col-md-6 text-md-left text-center text-small" style="color: #6f6f6f;"><a
+                            href="privacy-policy.html" style="color: #6f6f6f;">Privacy Policy</a> | <a href="tc.html"
+                            style="color: #6f6f6f;">Terms and Conditions</a></div>
+                    <div class="col-md-6 text-md-right text-center text-small" style="color: #6f6f6f;">&copy; 2024 <a
+                            href="https://www.smartfalcon.io/" style="color: #6f6f6f;">SmartFalcon</a>. All rights
+                        reserved</div>
                 </div>
             </div>
             <!-- end copyright -->
@@ -259,64 +314,65 @@
     </footer>
     <!--/ footer end  -->
 
-      <!-- Modal -->
-  <div class="modal fade custom_search_pop" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="serch_form">
-            <input type="text" placeholder="search" >
-            <button type="submit">search</button>
+    <!-- Modal -->
+    <div class="modal fade custom_search_pop" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="serch_form">
+                    <input type="text" placeholder="search">
+                    <button type="submit">search</button>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-        <!-- JS here -->
-        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="js/vendor/jquery-1.12.4.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/isotope.pkgd.min.js"></script>
-        <script src="js/ajax-form.js"></script>
-        <script src="js/waypoints.min.js"></script>
-        <script src="js/jquery.counterup.min.js"></script>
-        <script src="js/imagesloaded.pkgd.min.js"></script>
-        <script src="js/scrollIt.js"></script>
-        <script src="js/jquery.scrollUp.min.js"></script>
-        <script src="js/wow.min.js"></script>
-        <script src="js/nice-select.min.js"></script>
-        <script src="js/jquery.slicknav.min.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/gijgo.min.js"></script>
-    
-        <!--contact js-->
-        <script src="js/contact.js"></script>
-        <script src="js/jquery.ajaxchimp.min.js"></script>
-        <script src="js/jquery.form.js"></script>
-        <script src="js/jquery.validate.min.js"></script>
-        <script src="js/mail-script.js"></script>
-    
-        <script src="js/main.js"></script>
-        <script>
-            $('#datepicker').datepicker({
-                iconsLibrary: 'fontawesome',
-                icons: {
-                 rightIcon: '<span class="fa fa-caret-down"></span>'
-             }
-            });
-            $('#datepicker2').datepicker({
-                iconsLibrary: 'fontawesome',
-                icons: {
-                 rightIcon: '<span class="fa fa-caret-down"></span>'
-             }
-    
-            });
-        </script>
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/gijgo.min.js"></script>
+
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+
+    <script src="js/main.js"></script>
+    <script>
+        $('#datepicker').datepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+                rightIcon: '<span class="fa fa-caret-down"></span>'
+            }
+        });
+        $('#datepicker2').datepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+                rightIcon: '<span class="fa fa-caret-down"></span>'
+            }
+
+        });
+    </script>
 
 
 
 
-    </body>
-    
-    </html>
+</body>
+
+</html>
